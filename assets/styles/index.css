@@ -148,6 +148,20 @@ a {
 .header .menu-dropdown {
   background: #1E1A21;
   padding: 40px 0 40px 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-10px);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  z-index: -1;
+}
+.header .menu-dropdown.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 .header .menu-dropdown .menu-dropdown_inner {
   display: flex;
