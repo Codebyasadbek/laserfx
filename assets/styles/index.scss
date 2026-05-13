@@ -123,8 +123,10 @@ a {
 
     .header_inner {
         display: flex;
-        gap: 109px;
+        justify-content: center;
         align-items: center;
+        position: relative;
+        min-height: 65px;
 
         nav {
             display: flex;
@@ -162,12 +164,18 @@ a {
                         transform: rotate(180deg);
                     }
                 }
+
+                &:hover {
+                    opacity: 0.3;
+                }
             }
         }
 
     }
 
     .logo {
+        position: absolute;
+        left: 0;
         width: 130px;
         height: 65px;
 

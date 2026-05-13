@@ -111,8 +111,10 @@ a {
 }
 .header .header_inner {
   display: flex;
-  gap: 109px;
+  justify-content: center;
   align-items: center;
+  position: relative;
+  min-height: 65px;
 }
 .header .header_inner nav {
   display: flex;
@@ -146,7 +148,12 @@ a {
 .header .header_inner ul .menu-list.active img {
   transform: rotate(180deg);
 }
+.header .header_inner ul .menu-list:hover {
+  opacity: 0.3;
+}
 .header .logo {
+  position: absolute;
+  left: 0;
   width: 130px;
   height: 65px;
 }
