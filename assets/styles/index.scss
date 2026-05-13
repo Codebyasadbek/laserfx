@@ -84,14 +84,14 @@ a {
 
 .header {
     background: rgba(30, 26, 33, 0.80);
-    padding: 3px 0 2px 0;
     position: fixed;
     width: 100%;
     z-index: 999;
 
 
-    .header-container {
+    .header_bg {
         border-bottom: 0.3px solid rgba(255, 255, 255, 0.50);
+        padding: 3px 0 2px 0;
     }
 
     .header_inner {
@@ -124,6 +124,7 @@ a {
             font-weight: 700;
             line-height: normal;
             cursor: pointer;
+            transition: all .3s ease;
 
             &:hover {
                 border-radius: 10px;
@@ -164,5 +165,81 @@ a {
 
     .menu-dropdown {
         background: #1E1A21;
+        padding: 40px 0 40px 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s ease;
+        transform: translateY(-10px);
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .menu-dropdown_inner {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
+    }
+
+    .menu-dropdown_leftside {
+        display: flex;
+        align-items: start;
+        gap: 55px;
+
+        .items {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 25px;
+
+            a {
+                color: #FFF;
+                font-family: Inter;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 30px;
+                transition: all .3s ease;
+
+                &:hover {
+                    opacity: 0.3;
+                }
+            }
+        }
+    }
+
+    .menu-dropdown_rightside {
+        .contacts {
+            display: flex;
+            flex-direction: column;
+            grid-gap: 20px;
+            margin-bottom: 30px;
+
+            a {
+                color: #F92010;
+                text-align: right;
+                font-family: Mont;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .icon {
+            width: 45px;
+            height: 45px;
+            aspect-ratio: 1/1;
+        }
     }
 }
