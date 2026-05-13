@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>laserfx.ru</title>
+    <title>laserfx</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="assets/styles/index.css">
 </head>
 
@@ -24,19 +23,18 @@
                 <div class="header_bg">
                     <div class="container">
                         <div class="header_inner">
-                            <div class="logo">
+                            <a href="/" class="logo">
                                 <img src="assets/images/logo.svg" alt="logo.svg">
-                            </div>
+                            </a>
 
                             <nav>
-                                <button class="menu-btn">
-                                    <img src="assets/images/chevron-icon-img.svg" alt="">
-                                    МЕНЮ
-                                    <img src="assets/images/chevron-icon-img.svg" alt="">
-                                </button>
                                 <ul class="menu-items">
                                     <li>
                                         <a href="#" class="menu-list">О НАС</a>
+                                    </li>
+                                    <li>
+                                        <div class="menu-list open-dropdownBtn">УСЛУГИ <img
+                                                src="assets/images/dropdown-icon.svg" alt="dropdown-iconsvg"></div>
                                     </li>
                                     <li>
                                         <a href="#" class="menu-list">ОБОРУДОВАНИЕ</a>
@@ -102,14 +100,17 @@
                                     <a href="mailto:makarov@lazerfx.ru" class="email">makarov@lazerfx.ru</a>
                                 </div>
                                 <div class="social-icons">
-                                    <a href="#" class="icon">
-                                        <img src="assets/images/vk-icon.svg" alt="vk-icon.svg">
+                                    <a style="
+                                    width: 35px;
+                                    height: 35px;
+                                " href="https://vk.com/laserfxru" class="icon">
+                                        <img src="assets/images/vk-icon.png" alt="vk-icon.svg">
                                     </a>
-                                    <a href="#" class="icon">
-                                        <img src="assets/images/tg-icon.svg" alt="tg-icon.svg">
+                                    <a href="https://rutube.ru/channel/2838254/" class="icon">
+                                        <img src="assets/images/rutube.png" alt="tg-icon.svg">
                                     </a>
-                                    <a href="#" class="icon">
-                                        <img src="assets/images/youtube-icon.svg" alt="youtube-icon.svg">
+                                    <a href="https://max.ru/id502716780704_biz " class="icon">
+                                        <img src="assets/images/max.png" alt="youtube-icon.svg">
                                     </a>
                                 </div>
                             </div>
@@ -118,9 +119,107 @@
                 </div>
             </header>
             <section class="hero-section">
-
+                <div class="container">
+                    <div class="hero-section_inner">
+                        <div class="contents">
+                            <h1 class="main-title">Когда свет <br>
+                                <span>становится</span><br>
+                                искусством
+                            </h1>
+                            <div class="btns">
+                                <a href="#" class="btn">
+                                    <img src="assets/images/star-img.png" alt="star-img.png">
+                                    ЗАКАЗАТЬ ШОУ
+                                    <img src="assets/images/star-img.png" alt="star-img.png">
+                                </a>
+                                <a href="#" class="btn">
+                                    <img src="assets/images/star-img.png" alt="star-img.png">
+                                    УСЛУГИ
+                                    <img src="assets/images/star-img.png" alt="star-img.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="social-icons">
+                            <div class="icon" style="
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+">
+                                <a href="https://vk.com/laserfxru">
+                                    <img src="assets/images/vk-icon.png" alt="vk-icon.svg">
+                                </a>
+                            </div>
+                            <div class="icon">
+                                <a href="https://rutube.ru/channel/2838254/">
+                                    <img src="assets/images/rutube.png" alt="rutube.png">
+                                </a>
+                            </div>
+                            <div class="icon">
+                                <a href="https://max.ru/id502716780704_biz ">
+                                    <img src="assets/images/max.png" alt="max.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
+        <!-------------------------------------------- main end ------------->
+        <section class="marquee">
+            <div class="marquee__track">
+                <div class="marquee__content">
+                    <span class="marquee__item">Хочешь <em>SHOW</em>, которое говорит громче слов?</span>
+                    <img class="marquee__dot" src="assets/images/marquee_star.svg" alt="marquee_star.svg">
+                    <span class="marquee__item">Хочешь <em>SHOW</em>, которое говорит громче слов?</span>
+                    <img class="marquee__dot" src="assets/images/marquee_star.svg" alt="marquee_star.svg">
+                    <span class="marquee__item">Хочешь <em>SHOW</em>, которое говорит громче слов?</span>
+                    <img class="marquee__dot" src="assets/images/marquee_star.svg" alt="marquee_star.svg">
+                    <span class="marquee__item">Хочешь <em>SHOW</em>, которое говорит громче слов?</span>
+                    <img class="marquee__dot" src="assets/images/marquee_star.svg" alt="marquee_star.svg">
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="marquee__content">
+                    <span class="marquee__item">Хочешь <em>SHOW</em>, которое говорит громче слов?</span>
+                    <img class="marquee__dot" src="assets/images/marquee_star.svg" alt="marquee_star.svg">
+                    <span class="marquee__item">Хочешь <em>SHOW</em>, которое говорит громче слов?</span>
+                    <img class="marquee__dot" src="assets/images/marquee_star.svg" alt="marquee_star.svg">
+                    <span class="marquee__item">Хочешь <em>SHOW</em>, которое говорит громче слов?</span>
+                    <img class="marquee__dot" src="assets/images/marquee_star.svg" alt="marquee_star.svg">
+                    <span class="marquee__item">Хочешь <em>SHOW</em>, которое говорит громче слов?</span>
+                    <img class="marquee__dot" src="assets/images/marquee_star.svg" alt="marquee_star.svg">
+                </div>
+            </div>
+        </section>
+        <section class="about-us">
+            <div class="container">
+                <h2 class="section-title">КТО МЫ?</h2>
+                <p class="section-description">
+                    Добро пожаловать в LaserFX — компанию, которая превращает идеи в впечатляющие световые и лазерные
+                    шоу!
+                    <br><br>
+                    Мы создаём уникальные мультимедийные решения для мероприятий любого масштаба: от камерных вечеринок
+                    до масштабных фестивалей и корпоративных событий. Наша миссия — дарить зрителям незабываемые эмоции
+                    через синтез света, звука и технологий.
+                </p>
+
+                <div class="about-us_block">
+                    <div class="item">
+                        <div class="number">12 <span>ЛЕТ</span></div>
+                        <p class="item_description">Успешной работы на рынке лазерных шоу и световых инсталляций</p>
+                    </div>
+                    <div class="item">
+                        <div class="number">550 <span>+</span></div>
+                        <p class="item_description">Реализованных проектов — от корпоративных событий до городских
+                            фестивалей</p>
+                    </div>
+                    <div class="item">
+                        <div class="number">98 <span>%</span></div>
+                        <p class="item_description">Клиентов, возвращающаются к нам повторно или рекомендуют нас
+                            партнёрам</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
     <script src="assets/js/script.js"></script>
 </body>
