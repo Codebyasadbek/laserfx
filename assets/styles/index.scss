@@ -40,6 +40,34 @@ a {
 }
 
 
+.section-title {
+    color: #FFF;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.section-description {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 30px;
+    /* 120% */
+
+    span {
+        color: #F92010;
+        font-family: inherit;
+        font-size: inherit;
+        font-style: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+    }
+}
+
+
 .container {
     max-width: 1300px;
     width: 100%;
@@ -357,5 +385,80 @@ a {
 
     to {
         transform: translateX(-50%);
+    }
+}
+
+
+.about-us {
+    background: linear-gradient(180deg, rgba(30, 26, 33, 0.00) 40%, rgba(30, 26, 33, 0.00) 40%, rgba(255, 255, 255, 0.05) 100%);
+    margin-bottom: 80px;
+    padding-bottom: 100px;
+    background-image: url(../images/about-us_bg.png);
+    background-position: center -10%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .section-description {
+        text-align: center;
+        margin-bottom: 120px;
+    }
+
+    .about-us_block {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        align-self: stretch;
+
+        .item {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+
+            .number {
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                gap: 15px;
+                align-self: stretch;
+
+                p {
+                    color: #FFF;
+                    text-align: center;
+                    leading-trim: both;
+                    text-edge: cap;
+                    font-size: 170px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    display: block;
+                }
+
+                span {
+                    color: #F92010;
+                    text-align: center;
+                    leading-trim: both;
+                    text-edge: cap;
+                    font-family: Inter;
+                    font-style: normal;
+                    line-height: normal;
+                    display: block;
+                }
+            }
+
+            .item_description {
+                color: #FFF;
+                text-align: center;
+                font-family: Inter;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+            }
+        }
     }
 }
