@@ -401,10 +401,9 @@ a {
 
 
 .about-us {
-    background: linear-gradient(180deg, rgba(30, 26, 33, 0.00) 40%, rgba(30, 26, 33, 0.00) 40%, rgba(255, 255, 255, 0.05) 100%);
     margin-bottom: 80px;
     padding-bottom: 100px;
-    background-image: url(../images/about-us_bg.png);
+    background: url(../images/about-us_bg.png), linear-gradient(180deg, rgba(30, 26, 33, 0.00) 40%, rgba(30, 26, 33, 0.00) 40%, rgba(255, 255, 255, 0.05) 100%);
     background-position: center -10%;
     background-size: 100%;
     background-repeat: no-repeat;
