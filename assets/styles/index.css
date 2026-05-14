@@ -545,7 +545,7 @@ a {
 }
 
 .bg-sections {
-  background: linear-gradient(180deg, rgba(30, 26, 33, 0) 40%, rgba(30, 26, 33, 0) 40%, rgba(255, 255, 255, 0.05) 100%);
+  background: linear-gradient(0deg, rgba(30, 26, 33, 0) 40%, rgba(30, 26, 33, 0) 40%, rgba(255, 255, 255, 0.05) 100%);
   padding-top: 80px;
   padding-bottom: 80px;
   position: relative;
@@ -590,6 +590,7 @@ a {
   padding: 30px;
   border-radius: 20px;
   position: relative;
+  overflow: hidden;
 }
 .realization .left-blocks .item::after {
   width: 100%;
@@ -629,6 +630,7 @@ a {
   background-position: center;
   border-radius: 20px;
   position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
