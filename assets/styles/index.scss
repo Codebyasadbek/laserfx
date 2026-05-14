@@ -601,7 +601,7 @@ a {
                 width: 100%;
                 height: 150px;
                 position: absolute;
-                bottom: 0;
+                bottom: -21px;
                 left: 0;
                 background: linear-gradient(0deg, #1E1A21 0%, rgba(30, 26, 33, 0.00) 100%);
                 z-index: 9;
@@ -614,6 +614,7 @@ a {
                 background: #A44;
                 box-shadow: 21px -22px 4px -1px rgba(255, 255, 255, 0.20);
                 object-fit: cover;
+                margin-top: 21px;
             }
 
             .img-text {
@@ -626,7 +627,7 @@ a {
                 line-height: 30px;
                 text-align: end;
                 position: absolute;
-                bottom: -32px;
+                bottom: -53px;
                 right: 31px;
                 z-index: 10;
             }
