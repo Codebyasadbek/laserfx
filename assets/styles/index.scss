@@ -6,7 +6,7 @@
 
 
 body {
-    font-family: "Mont", sans-serif;
+    font-family: "Montserrat", sans-serif;
     background: #1E1A21;
 }
 
@@ -401,10 +401,10 @@ a {
 
 
 .about-us {
-
+    background: linear-gradient(180deg, rgba(30, 26, 33, 0.00) 40%, rgba(30, 26, 33, 0.00) 40%, rgba(255, 255, 255, 0.05) 100%);
     margin-bottom: 80px;
     padding-bottom: 100px;
-    background: url(../images/about-us_bg.png), linear-gradient(180deg, rgba(30, 26, 33, 0.00) 40%, rgba(30, 26, 33, 0.00) 40%, rgba(255, 255, 255, 0.05) 100%);
+    background-image: url(../images/about-us_bg.png);
     background-position: center -10%;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -502,8 +502,8 @@ a {
 
     .services__lists {
         .item {
-            border-top: 0.5px solid;
-            border-image: linear-gradient(to right, #FFFFFF 0%, #1E1A21 100%) 1;
+            border-top: 1px solid;
+            border-image: linear-gradient(to right, #FFF 0%, rgba(255, 255, 255, 0) 100%) 1;
             padding: 25.5px 0 25.5px 10px;
             margin-bottom: 10px;
             cursor: pointer;
@@ -572,19 +572,17 @@ a {
     @keyframes fadeInTab {
         from {
             opacity: 0;
-            transform: translateY(10px);
         }
 
         to {
             opacity: 1;
-            transform: translateY(0);
         }
     }
 
     .services__right {
         .item {
             display: none;
-            animation: fadeInTab 0.4s ease forwards;
+            animation: fadeInTab 0.6s ease-in-out forwards;
 
             &.active {
                 display: block; // change to block or flex if needed    
@@ -601,7 +599,7 @@ a {
                 width: 100%;
                 height: 150px;
                 position: absolute;
-                bottom: -21px;
+                bottom: 0;
                 left: 0;
                 background: linear-gradient(0deg, #1E1A21 0%, rgba(30, 26, 33, 0.00) 100%);
                 z-index: 9;
@@ -614,7 +612,6 @@ a {
                 background: #A44;
                 box-shadow: 21px -22px 4px -1px rgba(255, 255, 255, 0.20);
                 object-fit: cover;
-                margin-top: 21px;
             }
 
             .img-text {
@@ -627,7 +624,7 @@ a {
                 line-height: 30px;
                 text-align: end;
                 position: absolute;
-                bottom: -53px;
+                bottom: -32px;
                 right: 31px;
                 z-index: 10;
             }
@@ -635,6 +632,133 @@ a {
 
         .main-btn {
             margin-left: auto;
+        }
+    }
+}
+
+.bg-sections {
+    background: linear-gradient(180deg, rgba(30, 26, 33, 0.00) 40%, rgba(30, 26, 33, 0.00) 40%, rgba(255, 255, 255, 0.05) 100%);
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.realization {
+    color: #FFF;
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .blocks {
+        display: flex;
+        gap: 20px;
+    }
+
+    .left-blocks {
+        width: calc(70% - 10px);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .item {
+            width: 100%;
+            height: 350px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 30px;
+            border-radius: 20px;
+            position: relative;
+
+            &::after {
+                width: 100%;
+                height: 100%;
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: linear-gradient(0deg, rgba(30, 26, 33, 0.00) 0%, #1E1A21 100%);
+            }
+
+            .item-title {
+                color: #FFF;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: normal;
+                margin-bottom: 30px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .item-description {
+                color: #FFF;
+                font-family: Inter;
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                max-width: 752.427px;
+                position: relative;
+                z-index: 1;
+            }
+        }
+
+    }
+
+    .right-blocks {
+        width: calc(30% - 10px);
+        padding: 30px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &::after {
+            width: 100%;
+            height: 200px;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(0deg, rgba(30, 26, 33, 0.00) 0%, #1E1A21 100%);
+        }
+
+        &::before {
+            width: 100%;
+            height: 250px;
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(0deg, rgba(30, 26, 33, 0.00) 0%, #1E1A21 90%);
+            transform: rotate(180deg);
+        }
+
+        .item-title {
+            color: #FFF;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            position: relative;
+            z-index: 1;
+        }
+
+        .item-description {
+            color: #FFF;
+            font-family: Inter;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            position: relative;
+            z-index: 1;
         }
     }
 }
