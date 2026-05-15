@@ -916,7 +916,8 @@ a {
     .contacts-block {
         .logo {
             width: 195px;
-            aspect-ratio: 195/97;
+            height: auto;
+            object-fit: contain;
             margin-bottom: 30px;
         }
 
