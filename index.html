@@ -16,9 +16,6 @@
     <!-- 3. Preload critical images -->
     <link as="image" href="assets/images/main-page_main-bg.png" rel="preload" fetchpriority="high" />
     <link as="image" href="assets/images/logo.png" rel="preload" fetchpriority="high" />
-    <link as="image" href="assets/images/about-us_bg.png" rel="preload" />
-    <link as="image" href="assets/images/bg-sections_bg.png" rel="preload" />
-    <link as="image" href="assets/images/event-section_bg.png" rel="preload" />
     <!-- 4. Preload and load main CSS -->
     <link as="style" href="assets/styles/index.css" rel="preload" />
     <link href="assets/styles/index.css" rel="stylesheet" />
@@ -30,89 +27,10 @@
             margin: 0;
             padding: 0;
         }
-
-        /* Professional Laser Preloader */
-        #preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #1E1A21;
-            z-index: 999999;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 0.8s cubic-bezier(0.8, 0, 0.2, 1), visibility 0.8s;
-        }
-
-        .preloader-logo {
-            width: 180px;
-            margin-bottom: 40px;
-            animation: floatLogo 3s ease-in-out infinite;
-            filter: drop-shadow(0 0 15px rgba(249, 32, 16, 0.2));
-        }
-
-        .preloader-progress {
-            width: 200px;
-            height: 2px;
-            background: rgba(255, 255, 255, 0.1);
-            position: relative;
-            overflow: hidden;
-            border-radius: 2px;
-        }
-
-        .preloader-progress::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -50%;
-            height: 100%;
-            width: 50%;
-            background: #F92010;
-            box-shadow: 0 0 15px #F92010, 0 0 30px #F92010;
-            animation: laserScan 1.5s ease-in-out infinite;
-            border-radius: 2px;
-        }
-
-        @keyframes floatLogo {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-                filter: drop-shadow(0 0 25px rgba(249, 32, 16, 0.5));
-            }
-        }
-
-        @keyframes laserScan {
-            0% {
-                left: -50%;
-            }
-
-            100% {
-                left: 100%;
-            }
-        }
-
-        body.loaded #preloader {
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-        }
     </style>
 </head>
 
 <body>
-    <!-- Professional Preloader -->
-    <div id="preloader">
-        <img src="assets/images/logo.png" alt="LaserFX" class="preloader-logo">
-        <div class="preloader-progress"></div>
-    </div>
 
     <div class="wrapper">
         <div class="main">
@@ -415,7 +333,7 @@
                     <div class="services__right">
                         <div class="item active">
                             <div class="img-block">
-                                <img alt="services_img2.png" class="img" decoding="async" height="350" loading="eager"
+                                <img alt="services_img2.png" class="img" decoding="async" height="350" loading="lazy"
                                     src="assets/images/services_img2.png" width="723" />
                                 <p class="img-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab tempora
                                     velit, aut corrupti facere nulla et delectus dolorem, beatae consequuntur iure
@@ -426,13 +344,13 @@
                                 <img alt="star-img.png" decoding="async" height="30" loading="eager"
                                     src="assets/images/star-img.png" width="30" />
                                 ЗАКАЗАТЬ
-                                <img alt="star-img.png" decoding="async" height="30" loading="eager"
+                                <img alt="star-img.png" decoding="async" height="30" loading="lazy"
                                     src="assets/images/star-img.png" width="30" />
                             </a>
                         </div>
                         <div class="item">
                             <div class="img-block">
-                                <img alt="services_img3.png" class="img" decoding="async" height="248" loading="eager"
+                                <img alt="services_img3.png" class="img" decoding="async" height="248" loading="lazy"
                                     src="assets/images/services_img3.png" width="420" />
                                 <p class="img-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae
                                     alias id sed autem exercitationem quia earum dignissimos eum quis voluptates?</p>
@@ -447,7 +365,7 @@
                         </div>
                         <div class="item">
                             <div class="img-block">
-                                <img alt="services_img1.png" class="img" decoding="async" height="515" loading="eager"
+                                <img alt="services_img1.png" class="img" decoding="async" height="515" loading="lazy"
                                     src="assets/images/services_img1.png" width="750" />
                                 <p class="img-text">Это современные декоративные и функциональные <br /> решения для
                                     оформления
@@ -463,7 +381,7 @@
                         </div>
                         <div class="item">
                             <div class="img-block">
-                                <img alt="services_img1.png" class="img" decoding="async" height="515" loading="eager"
+                                <img alt="services_img1.png" class="img" decoding="async" height="515" loading="lazy"
                                     src="assets/images/services_img1.png" width="750" />
                                 <p class="img-text">Это современные декоративные и функциональные <br /> решения для
                                     оформления
@@ -479,7 +397,7 @@
                         </div>
                         <div class="item ">
                             <div class="img-block">
-                                <img alt="services_img1.png" class="img" decoding="async" height="515" loading="eager"
+                                <img alt="services_img1.png" class="img" decoding="async" height="515" loading="lazy"
                                     src="assets/images/services_img1.png" width="750" />
                                 <p class="img-text">Это современные декоративные и функциональные <br /> решения для
                                     оформления
@@ -495,7 +413,7 @@
                         </div>
                         <div class="item">
                             <div class="img-block">
-                                <img alt="services_img1.png" class="img" decoding="async" height="515" loading="eager"
+                                <img alt="services_img1.png" class="img" decoding="async" height="515" loading="lazy"
                                     src="assets/images/services_img1.png" width="750" />
                                 <p class="img-text">Это современные декоративные и функциональные <br /> решения для
                                     оформления
@@ -511,7 +429,7 @@
                         </div>
                         <div class="item">
                             <div class="img-block">
-                                <img alt="services_img1.png" class="img" decoding="async" height="515" loading="eager"
+                                <img alt="services_img1.png" class="img" decoding="async" height="515" loading="lazy"
                                     src="assets/images/services_img1.png" width="750" />
                                 <p class="img-text">Это современные декоративные и функциональные <br /> решения для
                                     оформления
