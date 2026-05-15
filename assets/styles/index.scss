@@ -200,16 +200,29 @@ a {
         position: relative;
         min-height: 65px;
 
+        @media screen and (max-width: 1210px) {
+            justify-content: end;
+        }
+
         nav {
             display: flex;
             align-items: center;
             gap: 98px;
+
+            @media screen and (max-width: 900px) {
+                display: none;
+            }
+
         }
 
         ul {
             display: inline-flex;
             align-items: center;
             gap: 50px;
+
+            @media screen and (max-width: 1024px) {
+                gap: 25px;
+            }
 
             .menu-list {
                 color: #FFF;
@@ -243,12 +256,37 @@ a {
             }
         }
 
+        .burger-menu_btn {
+            @media screen and (max-width: 900px) {
+                display: block;
+            }
+        }
+
+        .burger-menu_btn {
+            display: none;
+
+            @media screen and (max-width: 900px) {
+                display: block;
+
+                .btn {
+                    display: none;
+
+                    &.active {
+                        display: block;
+                    }
+                }
+            }
+        }
     }
 
     .logo {
         position: absolute;
         left: 0;
         width: 140px;
+
+        @media screen and (max-width: 480px) {
+            width: 113px;
+        }
 
         img {
             width: 100%;
