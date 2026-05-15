@@ -31,3 +31,24 @@ if (servicesListItems.length > 0 && servicesRightItems.length > 0) {
         });
     });
 }
+
+// Back to Top functionality
+const backToTopBtn = document.querySelector('.back-icon');
+
+if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+

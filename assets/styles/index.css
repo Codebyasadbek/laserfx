@@ -123,6 +123,40 @@ a {
   bottom: 0;
 }
 
+.back-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(30, 27, 33, 0.8);
+  border: 0.5px solid #FFF;
+  filter: drop-shadow(0 0 37px rgba(255, 255, 255, 0.4));
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  z-index: 1000;
+}
+@media (min-width: 1340px) {
+  .back-icon {
+    right: calc((100vw - 1300px) / 2 + 10px);
+  }
+}
+.back-icon {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+.back-icon.visible {
+  opacity: 1;
+  visibility: visible;
+}
+.back-icon:hover {
+  opacity: 0.3;
+}
+
 .main_bg-img {
   position: absolute;
   top: 0;
