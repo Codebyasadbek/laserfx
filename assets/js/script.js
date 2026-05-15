@@ -73,3 +73,17 @@ if (backToTopBtn) {
     });
 }
 
+// Professional Preloader Logic
+window.addEventListener('load', () => {
+    // Add loaded class to body to trigger CSS transitions
+    document.body.classList.add('loaded');
+    
+    // Completely remove preloader from DOM after transition finishes (800ms)
+    setTimeout(() => {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+            preloader.remove();
+        }
+    }, 800);
+});
+
