@@ -1,26 +1,24 @@
 <!DOCTYPE html>
+
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>laserfx</title>
-
     <!-- 1. Preconnect to font domains early -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <!-- 2. Load Google Fonts (removed display=swap to prevent the FOUT/two-stage visual jump the client sees) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900" rel="stylesheet">
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900"
+        rel="stylesheet" />
     <!-- 3. Preload critical images -->
-    <link rel="preload" href="assets/images/main-page_main-bg.png" as="image">
-    <link rel="preload" href="assets/images/logo.svg" as="image">
-
+    <link as="image" href="assets/images/main-page_main-bg.png" rel="preload" />
+    <link as="image" href="assets/images/logo.svg" rel="preload" />
     <!-- 4. Preload and load main CSS -->
-    <link rel="preload" href="assets/styles/index.css" as="style">
-    <link rel="stylesheet" href="assets/styles/index.css">
-
+    <link as="style" href="assets/styles/index.css" rel="preload" />
+    <link href="assets/styles/index.css" rel="stylesheet" />
     <!-- 5. Initial background style to prevent white flash -->
     <style>
         body {
@@ -36,36 +34,38 @@
     <div class="wrapper">
         <div class="main">
             <div class="main_bg-img">
-                <img src="assets/images/main-page_main-bg.png" alt="main-page_main-bg.png">
+                <img alt="main-page_main-bg.png" fetchpriority="high" height="750" loading="eager"
+                    src="assets/images/main-page_main-bg.png" width="1920" />
             </div>
             <header class="header">
                 <div class="header_bg">
                     <div class="container">
                         <div class="header_inner">
-                            <a href="/" class="logo">
-                                <img src="assets/images/logo.svg" alt="logo.svg">
+                            <a class="logo" href="/">
+                                <img alt="logo.svg" fetchpriority="high" height="55" loading="eager"
+                                    src="assets/images/logo.svg" width="140" />
                             </a>
-
                             <nav>
                                 <ul class="menu-items">
                                     <li>
-                                        <a href="#" class="menu-list">О НАС</a>
+                                        <a class="menu-list" href="#">О НАС</a>
                                     </li>
                                     <li>
-                                        <div class="menu-list open-dropdownBtn">УСЛУГИ <img
-                                                src="assets/images/dropdown-icon.svg" alt="dropdown-iconsvg"></div>
+                                        <div class="menu-list open-dropdownBtn">УСЛУГИ <img alt="dropdown-iconsvg"
+                                                fetchpriority="high" height="18" loading="eager"
+                                                src="assets/images/dropdown-icon.svg" width="18" /></div>
                                     </li>
                                     <li>
-                                        <a href="#" class="menu-list">ОБОРУДОВАНИЕ</a>
+                                        <a class="menu-list" href="#">ОБОРУДОВАНИЕ</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="menu-list">НАШИ РАБОТЫ</a>
+                                        <a class="menu-list" href="#">НАШИ РАБОТЫ</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="menu-list">ВАКАНСИИ</a>
+                                        <a class="menu-list" href="#">ВАКАНСИИ</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="menu-list">КОНТАКТЫ</a>
+                                        <a class="menu-list" href="#">КОНТАКТЫ</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -115,21 +115,24 @@
                             </div>
                             <div class="menu-dropdown_rightside">
                                 <div class="contacts">
-                                    <a href="tel:+7 (926) 186-70-57" class="tel">+7 (926) 186-70-57</a>
-                                    <a href="mailto:makarov@lazerfx.ru" class="email">makarov@lazerfx.ru</a>
+                                    <a class="tel" href="tel:+7 (926) 186-70-57">+7 (926) 186-70-57</a>
+                                    <a class="email" href="mailto:makarov@lazerfx.ru">makarov@lazerfx.ru</a>
                                 </div>
                                 <div class="social-icons">
-                                    <a style="
+                                    <a class="icon" href="https://vk.com/laserfxru" style="
                                     width: 35px;
                                     height: 35px;
-                                " href="https://vk.com/laserfxru" class="icon">
-                                        <img src="assets/images/vk-icon.png" alt="vk-icon.svg">
+                                ">
+                                        <img alt="vk-icon.svg" fetchpriority="high" height="128" loading="eager"
+                                            src="assets/images/vk-icon.png" width="128" />
                                     </a>
-                                    <a href="https://rutube.ru/channel/2838254/" class="icon">
-                                        <img src="assets/images/rutube.png" alt="tg-icon.svg">
+                                    <a class="icon" href="https://rutube.ru/channel/2838254/">
+                                        <img alt="tg-icon.svg" fetchpriority="high" height="300" loading="eager"
+                                            src="assets/images/rutube.png" width="300" />
                                     </a>
-                                    <a href="https://max.ru/id502716780704_biz " class="icon">
-                                        <img src="assets/images/max.png" alt="youtube-icon.svg">
+                                    <a class="icon" href="https://max.ru/id502716780704_biz ">
+                                        <img alt="youtube-icon.svg" fetchpriority="high" height="128" loading="eager"
+                                            src="assets/images/max.png" width="128" />
                                     </a>
                                 </div>
                             </div>
@@ -141,20 +144,24 @@
                 <div class="container">
                     <div class="hero-section_inner">
                         <div class="contents">
-                            <h1 class="main-title">Когда свет <br>
-                                <span>становится</span><br>
+                            <h1 class="main-title">Когда свет <br />
+                                <span>становится</span><br />
                                 искусством
                             </h1>
                             <div class="btns">
-                                <a href="#" class="main-btn">
-                                    <img src="assets/images/star-img.png" alt="star-img.png">
+                                <a class="main-btn" href="#">
+                                    <img alt="star-img.png" decoding="async" height="30" loading="lazy"
+                                        src="assets/images/star-img.png" width="30" />
                                     ЗАКАЗАТЬ ШОУ
-                                    <img src="assets/images/star-img.png" alt="star-img.png">
+                                    <img alt="star-img.png" decoding="async" height="30" loading="lazy"
+                                        src="assets/images/star-img.png" width="30" />
                                 </a>
-                                <a href="#" class="main-btn">
-                                    <img src="assets/images/star-img.png" alt="star-img.png">
+                                <a class="main-btn" href="#">
+                                    <img alt="star-img.png" decoding="async" height="30" loading="lazy"
+                                        src="assets/images/star-img.png" width="30" />
                                     УСЛУГИ
-                                    <img src="assets/images/star-img.png" alt="star-img.png">
+                                    <img alt="star-img.png" decoding="async" height="30" loading="lazy"
+                                        src="assets/images/star-img.png" width="30" />
                                 </a>
                             </div>
                         </div>
@@ -165,17 +172,20 @@
     margin: 0 auto;
 ">
                                 <a href="https://vk.com/laserfxru">
-                                    <img src="assets/images/vk-icon.png" alt="vk-icon.svg">
+                                    <img alt="vk-icon.svg" decoding="async" height="128" loading="lazy"
+                                        src="assets/images/vk-icon.png" width="128" />
                                 </a>
                             </div>
                             <div class="icon">
                                 <a href="https://rutube.ru/channel/2838254/">
-                                    <img src="assets/images/rutube.png" alt="rutube.png">
+                                    <img alt="rutube.png" decoding="async" height="300" loading="lazy"
+                                        src="assets/images/rutube.png" width="300" />
                                 </a>
                             </div>
                             <div class="icon">
                                 <a href="https://max.ru/id502716780704_biz ">
-                                    <img src="assets/images/max.png" alt="max.png">
+                                    <img alt="max.png" decoding="async" height="128" loading="lazy"
+                                        src="assets/images/max.png" width="128" />
                                 </a>
                             </div>
                         </div>
@@ -183,10 +193,10 @@
                 </div>
             </section>
         </div>
-
         <div class="container" style="position: relative;">
             <div class="back-icon">
-                <img src="assets/images/back-icon.svg" alt="back-icon.svg">
+                <img alt="back-icon.svg" decoding="async" height="20" loading="lazy" src="assets/images/back-icon.svg"
+                    width="36" />
             </div>
         </div>
         <!-------------------------------------------- main end ------------->
@@ -194,24 +204,32 @@
             <div class="marquee__track">
                 <div class="marquee__content">
                     <span class="marquee__item">Хочешь <em>SHOW</em>, которое говорит громче слов?</span>
-                    <img class="marquee__dot" src="assets/images/marquee_star.svg" alt="marquee_star.svg">
+                    <img alt="marquee_star.svg" class="marquee__dot" decoding="async" height="59" loading="lazy"
+                        src="assets/images/marquee_star.svg" width="59" />
                     <span class="marquee__item">Хочешь <em>SHOW</em>, которое говорит громче слов?</span>
-                    <img class="marquee__dot" src="assets/images/marquee_star.svg" alt="marquee_star.svg">
+                    <img alt="marquee_star.svg" class="marquee__dot" decoding="async" height="59" loading="lazy"
+                        src="assets/images/marquee_star.svg" width="59" />
                     <span class="marquee__item">Хочешь <em>SHOW</em>, которое говорит громче слов?</span>
-                    <img class="marquee__dot" src="assets/images/marquee_star.svg" alt="marquee_star.svg">
+                    <img alt="marquee_star.svg" class="marquee__dot" decoding="async" height="59" loading="lazy"
+                        src="assets/images/marquee_star.svg" width="59" />
                     <span class="marquee__item">Хочешь <em>SHOW</em>, которое говорит громче слов?</span>
-                    <img class="marquee__dot" src="assets/images/marquee_star.svg" alt="marquee_star.svg">
+                    <img alt="marquee_star.svg" class="marquee__dot" decoding="async" height="59" loading="lazy"
+                        src="assets/images/marquee_star.svg" width="59" />
                 </div>
                 <!-- Duplicate for seamless loop -->
                 <div class="marquee__content">
                     <span class="marquee__item">Хочешь <em>SHOW</em>, которое говорит громче слов?</span>
-                    <img class="marquee__dot" src="assets/images/marquee_star.svg" alt="marquee_star.svg">
+                    <img alt="marquee_star.svg" class="marquee__dot" decoding="async" height="59" loading="lazy"
+                        src="assets/images/marquee_star.svg" width="59" />
                     <span class="marquee__item">Хочешь <em>SHOW</em>, которое говорит громче слов?</span>
-                    <img class="marquee__dot" src="assets/images/marquee_star.svg" alt="marquee_star.svg">
+                    <img alt="marquee_star.svg" class="marquee__dot" decoding="async" height="59" loading="lazy"
+                        src="assets/images/marquee_star.svg" width="59" />
                     <span class="marquee__item">Хочешь <em>SHOW</em>, которое говорит громче слов?</span>
-                    <img class="marquee__dot" src="assets/images/marquee_star.svg" alt="marquee_star.svg">
+                    <img alt="marquee_star.svg" class="marquee__dot" decoding="async" height="59" loading="lazy"
+                        src="assets/images/marquee_star.svg" width="59" />
                     <span class="marquee__item">Хочешь <em>SHOW</em>, которое говорит громче слов?</span>
-                    <img class="marquee__dot" src="assets/images/marquee_star.svg" alt="marquee_star.svg">
+                    <img alt="marquee_star.svg" class="marquee__dot" decoding="async" height="59" loading="lazy"
+                        src="assets/images/marquee_star.svg" width="59" />
                 </div>
             </div>
         </section>
@@ -219,15 +237,14 @@
             <div class="container">
                 <h2 class="section-title">КТО МЫ?</h2>
                 <p class="section-description">
-                    Добро пожаловать в <span>LaserFX</span> — компанию, которая превращает идеи <br> в впечатляющие
+                    Добро пожаловать в <span>LaserFX</span> — компанию, которая превращает идеи <br /> в впечатляющие
                     световые и лазерные
                     шоу!
-                    <br><br>
+                    <br /><br />
                     Мы создаём уникальные мультимедийные решения для мероприятий любого масштаба: от камерных вечеринок
                     до масштабных фестивалей и корпоративных событий. Наша миссия — дарить зрителям незабываемые эмоции
                     через синтез света, звука и технологий.
                 </p>
-
                 <div class="about-us_block">
                     <div class="item">
                         <div class="number">
@@ -241,7 +258,8 @@
                             <p>550</p>
                             <span style="font-weight: 200;font-size: 130px;">+</span>
                         </div>
-                        <p class="item_description">Реализованных проектов — от <br> корпоративных событий до городских
+                        <p class="item_description">Реализованных проектов — от <br /> корпоративных событий до
+                            городских
                             фестивалей</p>
                     </div>
                     <div class="item">
@@ -249,7 +267,7 @@
                             <p>98</p>
                             <span style="font-weight: 300;font-size: 80px;transform: translateY(-25px);">%</span>
                         </div>
-                        <p class="item_description">Клиентов, возвращающаются к <br> нам повторно или рекомендуют нас
+                        <p class="item_description">Клиентов, возвращающаются к <br /> нам повторно или рекомендуют нас
                             партнёрам</p>
                     </div>
                 </div>
@@ -261,137 +279,167 @@
                     <h2 class="section-title">
                         УСЛУГИ
                     </h2>
-                    <a href="#" class="main-btn">
-                        <img src="assets/images/star-img.png" alt="star-img.png">
+                    <a class="main-btn" href="#">
+                        <img alt="star-img.png" decoding="async" height="30" loading="lazy"
+                            src="assets/images/star-img.png" width="30" />
                         СПИСОК ОБОРУДОВАНИЯ
-                        <img src="assets/images/star-img.png" alt="star-img.png">
+                        <img alt="star-img.png" decoding="async" height="30" loading="lazy"
+                            src="assets/images/star-img.png" width="30" />
                     </a>
                 </div>
                 <div class="services_block">
                     <div class="services__lists">
                         <div class="item">
-                            <img src="assets/images/star-img.png" alt="star-img.png" class="icon">
+                            <img alt="star-img.png" class="icon" decoding="async" height="30" loading="lazy"
+                                src="assets/images/star-img.png" width="30" />
                             <span class="text">Лазерные шоу</span>
                         </div>
                         <div class="item">
-                            <img src="assets/images/star-img.png" alt="" class="icon">
+                            <img alt="" class="icon" decoding="async" height="30" loading="lazy"
+                                src="assets/images/star-img.png" width="30" />
                             <span class="text">Водные шоу</span>
                         </div>
                         <div class="item">
-                            <img src="assets/images/star-img.png" alt="" class="icon">
-                            <span class="text">Мультимедийные <br>
+                            <img alt="" class="icon" decoding="async" height="30" loading="lazy"
+                                src="assets/images/star-img.png" width="30" />
+                            <span class="text">Мультимедийные <br />
                                 инсталляции</span>
                         </div>
                         <div class="item">
-                            <img src="assets/images/star-img.png" alt="" class="icon">
-                            <span class="text">LED-инсталляции <br>
+                            <img alt="" class="icon" decoding="async" height="30" loading="lazy"
+                                src="assets/images/star-img.png" width="30" />
+                            <span class="text">LED-инсталляции <br />
                                 из трубок</span>
                         </div>
                         <div class="item">
-                            <img src="assets/images/star-img.png" alt="" class="icon">
-                            <span class="text">Беспроводные <br>
+                            <img alt="" class="icon" decoding="async" height="30" loading="lazy"
+                                src="assets/images/star-img.png" width="30" />
+                            <span class="text">Беспроводные <br />
                                 световые инсталляции</span>
                         </div>
                         <div class="item">
-                            <img src="assets/images/star-img.png" alt="" class="icon">
+                            <img alt="" class="icon" decoding="async" height="30" loading="lazy"
+                                src="assets/images/star-img.png" width="30" />
                             <span class="text">Шоу LED-браслетов</span>
                         </div>
                         <div class="item">
-                            <img src="assets/images/star-img.png" alt="" class="icon">
-                            <span class="text">Архетектурное <br>
+                            <img alt="" class="icon" decoding="async" height="30" loading="lazy"
+                                src="assets/images/star-img.png" width="30" />
+                            <span class="text">Архетектурное <br />
                                 освещение</span>
                         </div>
                     </div>
                     <div class="services__right">
                         <div class="item">
                             <div class="img-block">
-                                <img src="assets/images/services_img2.png" alt="services_img2.png" class="img">
+                                <img alt="services_img2.png" class="img" decoding="async" height="350" loading="lazy"
+                                    src="assets/images/services_img2.png" width="723" />
                                 <p class="img-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab tempora
                                     velit, aut corrupti facere nulla et delectus dolorem, beatae consequuntur iure
                                     provident sunt distinctio dicta exercitationem quam quos aspernatur officiis quis
                                     odit nihil amet. Eos, quod libero! Consequuntur, voluptatem tempore.</p>
                             </div>
-                            <a href="#" class="main-btn">
-                                <img src="assets/images/star-img.png" alt="star-img.png">
+                            <a class="main-btn" href="#">
+                                <img alt="star-img.png" decoding="async" height="30" loading="lazy"
+                                    src="assets/images/star-img.png" width="30" />
                                 ЗАКАЗАТЬ
-                                <img src="assets/images/star-img.png" alt="star-img.png">
+                                <img alt="star-img.png" decoding="async" height="30" loading="lazy"
+                                    src="assets/images/star-img.png" width="30" />
                             </a>
                         </div>
                         <div class="item">
                             <div class="img-block">
-                                <img src="assets/images/services_img3.png" alt="services_img3.png" class="img">
+                                <img alt="services_img3.png" class="img" decoding="async" height="248" loading="lazy"
+                                    src="assets/images/services_img3.png" width="420" />
                                 <p class="img-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae
                                     alias id sed autem exercitationem quia earum dignissimos eum quis voluptates?</p>
                             </div>
-                            <a href="#" class="main-btn">
-                                <img src="assets/images/star-img.png" alt="star-img.png">
+                            <a class="main-btn" href="#">
+                                <img alt="star-img.png" decoding="async" height="30" loading="lazy"
+                                    src="assets/images/star-img.png" width="30" />
                                 ЗАКАЗАТЬ
-                                <img src="assets/images/star-img.png" alt="star-img.png">
+                                <img alt="star-img.png" decoding="async" height="30" loading="lazy"
+                                    src="assets/images/star-img.png" width="30" />
                             </a>
                         </div>
                         <div class="item">
                             <div class="img-block">
-                                <img src="assets/images/services_img1.png" alt="services_img1.png" class="img">
-                                <p class="img-text">Это современные декоративные и функциональные <br> решения для
+                                <img alt="services_img1.png" class="img" decoding="async" height="515" loading="lazy"
+                                    src="assets/images/services_img1.png" width="750" />
+                                <p class="img-text">Это современные декоративные и функциональные <br /> решения для
                                     оформления
-                                    пространств <br> без использования проводов. </p>
+                                    пространств <br /> без использования проводов. </p>
                             </div>
-                            <a href="#" class="main-btn">
-                                <img src="assets/images/star-img.png" alt="star-img.png">
+                            <a class="main-btn" href="#">
+                                <img alt="star-img.png" decoding="async" height="30" loading="lazy"
+                                    src="assets/images/star-img.png" width="30" />
                                 ЗАКАЗАТЬ
-                                <img src="assets/images/star-img.png" alt="star-img.png">
+                                <img alt="star-img.png" decoding="async" height="30" loading="lazy"
+                                    src="assets/images/star-img.png" width="30" />
                             </a>
                         </div>
                         <div class="item">
                             <div class="img-block">
-                                <img src="assets/images/services_img1.png" alt="services_img1.png" class="img">
-                                <p class="img-text">Это современные декоративные и функциональные <br> решения для
+                                <img alt="services_img1.png" class="img" decoding="async" height="515" loading="lazy"
+                                    src="assets/images/services_img1.png" width="750" />
+                                <p class="img-text">Это современные декоративные и функциональные <br /> решения для
                                     оформления
-                                    пространств <br> без использования проводов. </p>
+                                    пространств <br /> без использования проводов. </p>
                             </div>
-                            <a href="#" class="main-btn">
-                                <img src="assets/images/star-img.png" alt="star-img.png">
+                            <a class="main-btn" href="#">
+                                <img alt="star-img.png" decoding="async" height="30" loading="lazy"
+                                    src="assets/images/star-img.png" width="30" />
                                 ЗАКАЗАТЬ
-                                <img src="assets/images/star-img.png" alt="star-img.png">
+                                <img alt="star-img.png" decoding="async" height="30" loading="lazy"
+                                    src="assets/images/star-img.png" width="30" />
                             </a>
                         </div>
                         <div class="item">
                             <div class="img-block">
-                                <img src="assets/images/services_img1.png" alt="services_img1.png" class="img">
-                                <p class="img-text">Это современные декоративные и функциональные <br> решения для
+                                <img alt="services_img1.png" class="img" decoding="async" height="515" loading="lazy"
+                                    src="assets/images/services_img1.png" width="750" />
+                                <p class="img-text">Это современные декоративные и функциональные <br /> решения для
                                     оформления
-                                    пространств <br> без использования проводов. </p>
+                                    пространств <br /> без использования проводов. </p>
                             </div>
-                            <a href="#" class="main-btn">
-                                <img src="assets/images/star-img.png" alt="star-img.png">
+                            <a class="main-btn" href="#">
+                                <img alt="star-img.png" decoding="async" height="30" loading="lazy"
+                                    src="assets/images/star-img.png" width="30" />
                                 ЗАКАЗАТЬ
-                                <img src="assets/images/star-img.png" alt="star-img.png">
+                                <img alt="star-img.png" decoding="async" height="30" loading="lazy"
+                                    src="assets/images/star-img.png" width="30" />
                             </a>
                         </div>
                         <div class="item">
                             <div class="img-block">
-                                <img src="assets/images/services_img1.png" alt="services_img1.png" class="img">
-                                <p class="img-text">Это современные декоративные и функциональные <br> решения для
+                                <img alt="services_img1.png" class="img" decoding="async" height="515" loading="lazy"
+                                    src="assets/images/services_img1.png" width="750" />
+                                <p class="img-text">Это современные декоративные и функциональные <br /> решения для
                                     оформления
-                                    пространств <br> без использования проводов. </p>
+                                    пространств <br /> без использования проводов. </p>
                             </div>
-                            <a href="#" class="main-btn">
-                                <img src="assets/images/star-img.png" alt="star-img.png">
+                            <a class="main-btn" href="#">
+                                <img alt="star-img.png" decoding="async" height="30" loading="lazy"
+                                    src="assets/images/star-img.png" width="30" />
                                 ЗАКАЗАТЬ
-                                <img src="assets/images/star-img.png" alt="star-img.png">
+                                <img alt="star-img.png" decoding="async" height="30" loading="lazy"
+                                    src="assets/images/star-img.png" width="30" />
                             </a>
                         </div>
                         <div class="item">
                             <div class="img-block">
-                                <img src="assets/images/services_img1.png" alt="services_img1.png" class="img">
-                                <p class="img-text">Это современные декоративные и функциональные <br> решения для
+                                <img alt="services_img1.png" class="img" decoding="async" height="515" loading="lazy"
+                                    src="assets/images/services_img1.png" width="750" />
+                                <p class="img-text">Это современные декоративные и функциональные <br /> решения для
                                     оформления
-                                    пространств <br> без использования проводов. </p>
+                                    пространств <br /> без использования проводов. </p>
                             </div>
-                            <a href="#" class="main-btn">
-                                <img src="assets/images/star-img.png" alt="star-img.png">
+                            <a class="main-btn" href="#">
+                                <img alt="star-img.png" decoding="async" height="30" loading="lazy"
+                                    src="assets/images/star-img.png" width="30" />
                                 ЗАКАЗАТЬ
-                                <img src="assets/images/star-img.png" alt="star-img.png">
+                                <img alt="star-img.png" decoding="async" height="30" loading="lazy"
+                                    src="assets/images/star-img.png" width="30" />
                             </a>
                         </div>
                     </div>
@@ -401,25 +449,29 @@
         <div class="bg-sections">
             <section class="realization">
                 <div class="container">
-                    <div class="section-title">От идеи до воплощения — <br> без компромиссов</div>
+                    <div class="section-title">От идеи до воплощения — <br /> без компромиссов</div>
                     <div class="blocks">
                         <div class="left-blocks">
                             <div class="item" style="background-image: url(assets/images/realization_img1.png);">
-                                <h3 class="item-title">ПРЕМИАЛЬНЫЕ <br>
+                                <h3 class="item-title">ПРЕМИАЛЬНЫЕ <br />
                                     РЕШЕНИЯ</h3>
-                                <p class="item-description">Мы создаём эксклюзивные проекты, которые соответствуют <br>
+                                <p class="item-description">Мы создаём эксклюзивные проекты, которые соответствуют
+                                    <br />
                                     самым
-                                    высоким стандартам и ожиданиям.</p>
+                                    высоким стандартам и ожиданиям.
+                                </p>
                             </div>
                             <div class="item" style="background-image: url(assets/images/realization_img2.png);">
                                 <h3 class="item-title">УНИВИРСАЛЬНОСТЬ</h3>
-                                <p class="item-description">Наши инсталляции подходят как для масштабных фестивалей <br>
+                                <p class="item-description">Наши инсталляции подходят как для масштабных фестивалей
+                                    <br />
                                     и
-                                    городских праздников, так и для более камерных мероприятий.</p>
+                                    городских праздников, так и для более камерных мероприятий.
+                                </p>
                             </div>
                         </div>
                         <div class="right-blocks" style="background-image: url(assets/images/realization_img3.png);">
-                            <h3 class="item-title">ИССКУСТВО <br>
+                            <h3 class="item-title">ИССКУСТВО <br />
                                 СВЕТА</h3>
                             <p class="item-description">
                                 Мы превращаем свет в искусство, создавая атмосферу, которая поражает воображение и
@@ -432,37 +484,44 @@
             </section>
             <section class="precision">
                 <div class="container">
-                    <h2 class="section-title">Laser <span>FX</span>: когда точность <br>
+                    <h2 class="section-title">Laser <span>FX</span>: когда точность <br />
                         встречает креатив</h2>
                     <p class="section-description">
                         Доверяя LaserFX, вы получаете не просто исполнителя, а партнёра, который разделяет вашу страсть
                         к совершенству. Мы знаем, как превратить ваши идеи в реальность — с миллиметровой точностью и
                         без компромиссов в качестве.
                     </p>
-                    <a href="#" class="main-btn">
-                        <img src="assets/images/star-img.png" alt="star-img.png">
+                    <a class="main-btn" href="#">
+                        <img alt="star-img.png" decoding="async" height="30" loading="lazy"
+                            src="assets/images/star-img.png" width="30" />
                         В ГАЛЕРЕЮ
-                        <img src="assets/images/star-img.png" alt="star-img.png">
+                        <img alt="star-img.png" decoding="async" height="30" loading="lazy"
+                            src="assets/images/star-img.png" width="30" />
                     </a>
-
                     <div class="block">
                         <div class="item">
-                            <img src="assets/images/precision_img1.png" alt="precision_img1.png">
+                            <img alt="precision_img1.png" decoding="async" height="350" loading="lazy"
+                                src="assets/images/precision_img1.png" width="723" />
                         </div>
                         <div class="item">
-                            <img src="assets/images/precision_img2.png" alt="precision_img2.png">
+                            <img alt="precision_img2.png" decoding="async" height="165" loading="lazy"
+                                src="assets/images/precision_img2.png" width="557" />
                         </div>
                         <div class="item">
-                            <img src="assets/images/precision_img3.png" alt="precision_img3.png">
+                            <img alt="precision_img3.png" decoding="async" height="165" loading="lazy"
+                                src="assets/images/precision_img3.png" width="557" />
                         </div>
                         <div class="item">
-                            <img src="assets/images/precision_img4.png" alt="precision_img4.png">
+                            <img alt="precision_img4.png" decoding="async" height="165" loading="lazy"
+                                src="assets/images/precision_img4.png" width="420" />
                         </div>
                         <div class="item">
-                            <img src="assets/images/precision_img5.png" alt="precision_img5.png">
+                            <img alt="precision_img5.png" decoding="async" height="165" loading="lazy"
+                                src="assets/images/precision_img5.png" width="420" />
                         </div>
                         <div class="item">
-                            <img src="assets/images/precision_img6.png" alt="precision_img6.png">
+                            <img alt="precision_img6.png" decoding="async" height="165" loading="lazy"
+                                src="assets/images/precision_img6.png" width="420" />
                         </div>
                     </div>
                 </div>
@@ -470,16 +529,19 @@
         </div>
         <section class="event-section">
             <div class="container">
-                <h2 class="section-title">СОзадим ваше <br>
+                <h2 class="section-title">СОзадим ваше <br />
                     <span>незабываемое</span> событие
                 </h2>
-                <p class="section-description">Доверьте нам создание вашего события. Мы создаем не <br> просто зрелище –
+                <p class="section-description">Доверьте нам создание вашего события. Мы создаем не <br /> просто зрелище
+                    –
                     мы
                     создаем атмосферу!</p>
-                <a href="#" class="main-btn">
-                    <img src="assets/images/star-img.png" alt="star-img.png">
+                <a class="main-btn" href="#">
+                    <img alt="star-img.png" decoding="async" height="30" loading="lazy" src="assets/images/star-img.png"
+                        width="30" />
                     ЗАКАЗАТЬ ШОУ
-                    <img src="assets/images/star-img.png" alt="star-img.png">
+                    <img alt="star-img.png" decoding="async" height="30" loading="lazy" src="assets/images/star-img.png"
+                        width="30" />
                 </a>
             </div>
         </section>
@@ -488,21 +550,22 @@
                 <div class="footer_inner">
                     <div class="contacts-block">
                         <a href="/">
-                            <img src="assets/images/logo.svg" alt="logo.svg" class="logo">
+                            <img alt="logo.svg" class="logo" decoding="async" height="55" loading="lazy"
+                                src="assets/images/logo.svg" width="140" />
                         </a>
                         <div class="items">
-                            <a href="tel:+79261867057" class="tel">+7 (926) 186-70-57</a>
-                            <a href="mailto:makarov@lazerfx.ru" class="email">makarov@lazerfx.ru</a>
+                            <a class="tel" href="tel:+79261867057">+7 (926) 186-70-57</a>
+                            <a class="email" href="mailto:makarov@lazerfx.ru">makarov@lazerfx.ru</a>
                         </div>
                         <div class="social-icons">
-                            <a href="https://vk.com/laserfxru"><img src="assets/images/vk-icon.png" alt="vk-icon.png"
-                                    class="icon"></a>
-
-                            <a href="https://rutube.ru/channel/2838254/"><img src="assets/images/rutube.png"
-                                    alt="rutube.png" class="icon"></a>
-
-                            <a href="https://max.ru/id502716780704_biz "><img src="assets/images/max.png" alt="max.png"
-                                    class="icon"></a>
+                            <a href="https://vk.com/laserfxru"><img alt="vk-icon.png" class="icon" decoding="async"
+                                    height="128" loading="lazy" src="assets/images/vk-icon.png" width="128" /></a>
+                            <a href="https://rutube.ru/channel/2838254/"><img alt="rutube.png" class="icon"
+                                    decoding="async" height="300" loading="lazy" src="assets/images/rutube.png"
+                                    width="300" /></a>
+                            <a href="https://max.ru/id502716780704_biz "><img alt="max.png" class="icon"
+                                    decoding="async" height="128" loading="lazy" src="assets/images/max.png"
+                                    width="128" /></a>
                         </div>
                         <div class="contents">
                             <p>Премиальные лазерные шоу и световые
@@ -516,38 +579,38 @@
                             <div class="footer-nav">
                                 <ul class="menu-list">
                                     <li class="menu-item">
-                                        <a href="#" class="menu-link">Лазерная проекция</a>
+                                        <a class="menu-link" href="#">Лазерная проекция</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="#" class="menu-link">Laser Bar</a>
+                                        <a class="menu-link" href="#">Laser Bar</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="#" class="menu-link">Led Трубки</a>
+                                        <a class="menu-link" href="#">Led Трубки</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="#" class="menu-link">Архитектурное освещение</a>
+                                        <a class="menu-link" href="#">Архитектурное освещение</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="#" class="menu-link">Led Браслеты</a>
+                                        <a class="menu-link" href="#">Led Браслеты</a>
                                     </li>
                                 </ul>
                                 <ul class="menu-list">
                                     <li class="menu-item">
-                                        <a href="#" class="menu-link">Танцующие фонтаны</a>
+                                        <a class="menu-link" href="#">Танцующие фонтаны</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="#" class="menu-link">Лазерное шоу</a>
+                                        <a class="menu-link" href="#">Лазерное шоу</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="#" class="menu-link">
+                                        <a class="menu-link" href="#">
                                             Голография на воде
                                         </a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="#" class="menu-link">Производсвто лазерной графики</a>
+                                        <a class="menu-link" href="#">Производсвто лазерной графики</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="#" class="menu-link">Аренда лазеров</a>
+                                        <a class="menu-link" href="#">Аренда лазеров</a>
                                     </li>
                                 </ul>
                             </div>
@@ -557,19 +620,19 @@
                             <div class="footer-nav">
                                 <ul class="menu-list">
                                     <li class="menu-item">
-                                        <a href="#" class="menu-link">О нас</a>
+                                        <a class="menu-link" href="#">О нас</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="#" class="menu-link">Наши работы</a>
+                                        <a class="menu-link" href="#">Наши работы</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="#" class="menu-link">Оборудование</a>
+                                        <a class="menu-link" href="#">Оборудование</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="#" class="menu-link">Вакансии</a>
+                                        <a class="menu-link" href="#">Вакансии</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="#" class="menu-link">Контакты</a>
+                                        <a class="menu-link" href="#">Контакты</a>
                                     </li>
                                 </ul>
                             </div>
@@ -579,7 +642,7 @@
             </div>
         </footer>
     </div>
-    <script src="assets/js/script.js"></script>
+    <script defer src="assets/js/script.js"></script>
 </body>
 
 </html>
