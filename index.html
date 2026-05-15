@@ -5,22 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>laserfx</title>
+
+    <!-- 1. Preconnect to font domains early -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- 2. Load Google Fonts (removed display=swap to prevent the FOUT/two-stage visual jump the client sees) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900" rel="stylesheet">
+
+    <!-- 3. Preload critical images -->
+    <link rel="preload" href="assets/images/main-page_main-bg.png" as="image">
+    <link rel="preload" href="assets/images/logo.svg" as="image">
+
+    <!-- 4. Preload and load main CSS -->
+    <link rel="preload" href="assets/styles/index.css" as="style">
+    <link rel="stylesheet" href="assets/styles/index.css">
+
+    <!-- 5. Initial background style to prevent white flash -->
     <style>
         body {
             background-color: #1E1A21;
             color: #fff;
+            margin: 0;
+            padding: 0;
         }
     </style>
-    <link rel="preload" href="assets/images/main-page_main-bg.png" as="image">
-    <link rel="preload" href="assets/images/main-page_main-bg.png" as="video">
-    <link rel="preload" href="assets/images/logo.svg" as="image">
-    <link rel="preload" href="assets/styles/index.css" as="style">
-    <link rel="stylesheet" href="assets/styles/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
