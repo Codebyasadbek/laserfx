@@ -14,8 +14,11 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900"
         rel="stylesheet" />
     <!-- 3. Preload critical images -->
-    <link as="image" href="assets/images/main-page_main-bg.png" rel="preload" />
-    <link as="image" href="assets/images/logo.png" rel="preload" />
+    <link as="image" href="assets/images/main-page_main-bg.png" rel="preload" fetchpriority="high" />
+    <link as="image" href="assets/images/logo.png" rel="preload" fetchpriority="high" />
+    <link as="image" href="assets/images/about-us_bg.png" rel="preload" />
+    <link as="image" href="assets/images/bg-sections_bg.png" rel="preload" />
+    <link as="image" href="assets/images/event-section_bg.png" rel="preload" />
     <!-- 4. Preload and load main CSS -->
     <link as="style" href="assets/styles/index.css" rel="preload" />
     <link href="assets/styles/index.css" rel="stylesheet" />
