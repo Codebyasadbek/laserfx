@@ -19,8 +19,13 @@ const servicesListItems = document.querySelectorAll('.services__lists .item');
 const servicesRightItems = document.querySelectorAll('.services__right .item');
 
 if (servicesListItems.length > 0 && servicesRightItems.length > 0) {
+    // Initialize first item as active
+    servicesListItems[0].classList.add('active');
+    servicesRightItems[0].classList.add('active');
+
     servicesListItems.forEach((item, index) => {
-        item.addEventListener('click', () => {
+        // Change image on hover
+        item.addEventListener('mouseenter', () => {
             servicesListItems.forEach(el => el.classList.remove('active'));
             servicesRightItems.forEach(el => el.classList.remove('active'));
 
@@ -29,6 +34,22 @@ if (servicesListItems.length > 0 && servicesRightItems.length > 0) {
                 servicesRightItems[index].classList.add('active');
             }
         });
+
+        // Navigate on list item click
+        item.addEventListener('click', () => {
+            window.location.href = '#'; // Replace with actual section URL later
+        });
+    });
+
+    servicesRightItems.forEach((rightItem) => {
+        const imgBlock = rightItem.querySelector('.img-block');
+        if (imgBlock) {
+            imgBlock.style.cursor = 'pointer';
+            // Navigate on image click
+            imgBlock.addEventListener('click', () => {
+                window.location.href = '#'; // Replace with actual section URL later
+            });
+        }
     });
 }
 
