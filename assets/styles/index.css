@@ -135,12 +135,12 @@ a {
   filter: drop-shadow(0 0 37px rgba(255, 255, 255, 0.4));
   position: fixed;
   bottom: 70px;
-  right: 20px;
+  right: -120px;
   z-index: 1000;
 }
 @media (min-width: 1340px) {
   .back-icon {
-    right: calc((100vw - 1300px) / 2 + 10px);
+    right: calc((100vw - 1300px) / 2 - 120px);
   }
 }
 .back-icon {
