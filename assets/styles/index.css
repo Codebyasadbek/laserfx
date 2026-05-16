@@ -91,6 +91,7 @@ a {
   font-weight: 300;
   line-height: normal;
   transition: all 0.3s ease;
+  text-transform: uppercase;
   cursor: pointer;
 }
 .main-btn:hover {
@@ -916,4 +917,51 @@ a {
 }
 .footer .footer-menu_block .footer-menu .menu-list .menu-link:hover {
   opacity: 0.3;
+}
+
+.services-page .main {
+  padding-top: 90px;
+}
+.services-page .breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+.services-page .breadcrumb .item {
+  color: #FFF;
+  leading-trim: both;
+  text-edge: cap;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+.services-page .breadcrumb .item:hover {
+  opacity: 0.8;
+}
+.services-page .breadcrumb .item.now {
+  opacity: 0.8;
+}
+.services-page .breadcrumb .line {
+  opacity: 0.5;
+  background: #FFF;
+  width: 30px;
+  height: 0.5px;
+}
+.services-page .hero-section_inner {
+  display: block;
+}
+.services-page .hero-section .main-title {
+  margin-bottom: 25px;
+}
+.services-page .hero-section .section-description {
+  margin-bottom: 100px;
+}
+.services-page .hero-section .btns .main-btn {
+  margin-left: auto;
 }/*# sourceMappingURL=index.css.map */
