@@ -1014,8 +1014,6 @@ a {
   justify-content: center;
 }
 .services-page .service-about .video-block .player-btn {
-  width: 41px;
-  height: 41px;
   cursor: pointer;
   border-radius: 100px;
   border: 1px solid #4D4D4D;
