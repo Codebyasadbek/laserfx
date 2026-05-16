@@ -763,6 +763,9 @@ a {
   margin-left: auto;
   margin-bottom: 80px;
 }
+.precision .section-title {
+  text-transform: uppercase;
+}
 
 .precision_block {
   display: grid;

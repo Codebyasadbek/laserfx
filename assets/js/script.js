@@ -77,6 +77,7 @@ if (backToTopBtn) {
 const otherServiceSwiper = new Swiper('.other-service_blocks', {
     slidesPerView: 3,
     spaceBetween: 20,
+    grabCursor: true,
     navigation: {
         nextEl: '.other-service-next',
         prevEl: '.other-service-prev',
