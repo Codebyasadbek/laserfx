@@ -1088,6 +1088,7 @@ a {
 .services-page {
     .main {
         padding-top: 90px;
+        margin-bottom: 0;
     }
 
     .breadcrumb {
@@ -1202,6 +1203,120 @@ a {
                     opacity: 0.8;
                 }
             }
+        }
+    }
+}
+
+.other-service {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(30, 26, 33, 0.00) 40%, rgba(30, 26, 33, 0.00) 40%, rgba(255, 255, 255, 0.05) 100%);
+    padding: 80px 0;
+
+    .service-page_section-title {
+        margin-bottom: 40px;
+    }
+
+    .other-service_blocks {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+
+        .swiper-wrapper {
+            align-items: stretch;
+        }
+
+        .swiper-slide {
+            height: stretch;
+        }
+
+    }
+
+    .item {
+        height: 100%;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.80);
+        background: #1E1A21;
+        overflow: hidden;
+        position: relative;
+
+        .img {
+            width: 100%;
+            height: 248px;
+        }
+
+        .contents {
+            padding: 20px;
+            padding-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            justify-content: space-between;
+
+            .btn {
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                gap: 10px;
+                color: rgba(255, 255, 255, 0.80);
+                font-family: Inter;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+
+                .icon {}
+            }
+        }
+
+        .texts {
+            padding-bottom: 82px;
+        }
+
+        .item_title {
+            color: #FFF;
+            leading-trim: both;
+            text-edge: cap;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 15px;
+        }
+
+        .item_description {
+            color: #FFF;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 30px;
+        }
+
+
+    }
+
+    .navigation {
+        position: absolute;
+        bottom: 207px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 990;
+
+        .prev {
+            position: relative;
+            left: -40px;
+        }
+
+        .next {
+            position: relative;
+            right: -40px;
+        }
+
+        .btn {
+            border: 0.5px dashed #FFF;
         }
     }
 }

@@ -932,6 +932,7 @@ a {
 
 .services-page .main {
   padding-top: 90px;
+  margin-bottom: 0;
 }
 .services-page .breadcrumb {
   display: inline-flex;
@@ -1026,4 +1027,100 @@ a {
 }
 .services-page .service-about .video-block .player-btn:hover {
   opacity: 0.8;
+}
+
+.other-service {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(30, 26, 33, 0) 40%, rgba(30, 26, 33, 0) 40%, rgba(255, 255, 255, 0.05) 100%);
+  padding: 80px 0;
+}
+.other-service .service-page_section-title {
+  margin-bottom: 40px;
+}
+.other-service .other-service_blocks {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.other-service .other-service_blocks .swiper-wrapper {
+  align-items: stretch;
+}
+.other-service .other-service_blocks .swiper-slide {
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: stretch;
+}
+.other-service .item {
+  height: 100%;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: #1E1A21;
+  overflow: hidden;
+  position: relative;
+}
+.other-service .item .img {
+  width: 100%;
+  height: 248px;
+}
+.other-service .item .contents {
+  padding: 20px;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: space-between;
+}
+.other-service .item .contents .btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.other-service .item .texts {
+  padding-bottom: 82px;
+}
+.other-service .item .item_title {
+  color: #FFF;
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 15px;
+}
+.other-service .item .item_description {
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px;
+}
+.other-service .navigation {
+  position: absolute;
+  bottom: 207px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 990;
+}
+.other-service .navigation .prev {
+  position: relative;
+  left: -40px;
+}
+.other-service .navigation .next {
+  position: relative;
+  right: -40px;
+}
+.other-service .navigation .btn {
+  border: 0.5px dashed #FFF;
 }/*# sourceMappingURL=index.css.map */

@@ -73,5 +73,12 @@ if (backToTopBtn) {
     });
 }
 
-
-
+// Swiper Initialization
+const otherServiceSwiper = new Swiper('.other-service_blocks', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: '.other-service-next',
+        prevEl: '.other-service-prev',
+    },
+});
