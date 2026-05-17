@@ -17,6 +17,7 @@
     <link as="image" href="assets/images/main-page_main-bg.png" rel="preload" fetchpriority="high" />
 
     <!-- 4. Load main CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="assets/styles/index.css" rel="stylesheet" />
 
     <!-- 5. Initial background style to prevent white flash -->
@@ -71,8 +72,8 @@
                                 </ul>
                             </nav>
                             <div class="burger-menu_btn">
-                                <img src="assets/images/burger-menu_btn.svg" alt="burger-menu_btn.svg" class="btn active"
-                                    decoding="async">
+                                <img src="assets/images/burger-menu_btn.svg" alt="burger-menu_btn.svg"
+                                    class="btn active" decoding="async">
                                 <img src="assets/images/close-btn.svg" alt="close-btn.svg" class="btn" decoding="async">
                             </div>
                         </div>
@@ -648,6 +649,53 @@
             </div>
         </footer>
     </div>
+
+    <!-- Backend-Friendly Image Modal -->
+    <div id="image-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-close">
+                <img src="assets/images/x.svg" alt="close">
+            </div>
+            <img src="" class="custom-image" alt="enlarged-project">
+        </div>
+    </div>
+
+    <!-- Backend-Friendly Video Modal -->
+    <div id="video-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-close">
+                <img src="assets/images/x.svg" alt="close">
+            </div>
+            <div class="video-wrapper">
+                <!-- If iframe-based (YouTube/Rutube), this iframe will be active -->
+                <iframe id="modal-iframe" src="" width="100%" height="100%" allow="clipboard-write; autoplay"
+                    webkitallowfullscreen mozallowfullscreen allowfullscreen
+                    style="border: none; display: none; border-radius: 20px;"></iframe>
+
+                <!-- If HTML5 video file based, this video player will be active -->
+                <div id="modal-video-container" class="video-wrapper paused"
+                    style="display: none; width: 100%; height: 100%;">
+                    <video id="modal-video" src="" loop playsinline></video>
+                    <div class="custom-controls">
+                        <div class="control-bottom-row">
+                            <button class="play-pause-btn" title="Play">
+                                <svg class="play-icon" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                <svg class="pause-icon hidden" viewBox="0 0 24 24">
+                                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                                </svg>
+                            </button>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script defer="" src="assets/js/script.js"></script>
 </body>
 
