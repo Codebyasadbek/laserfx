@@ -75,6 +75,7 @@ a {
 }
 
 .main-btn {
+  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   padding: 20px;
@@ -117,6 +118,7 @@ a {
 
 .main {
   min-height: 750px;
+  height: -moz-fit-content;
   height: fit-content;
   position: relative;
   padding-top: 120px;
@@ -388,7 +390,9 @@ a {
 .marquee {
   margin-bottom: 58px;
   overflow: hidden;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   display: flex;
 }
 .marquee .marquee__track {
@@ -397,6 +401,7 @@ a {
   animation: marquee-scroll 50s linear infinite;
   white-space: nowrap;
   will-change: transform;
+  width: -moz-max-content;
   width: max-content;
 }
 .marquee .marquee__content {
@@ -523,7 +528,8 @@ a {
 }
 .services .services__lists .item {
   border-top: 1px solid;
-  border-image: linear-gradient(to right, #FFF 0%, rgba(255, 255, 255, 0) 100%) 1;
+  -o-border-image: linear-gradient(to right, #FFF 0%, rgba(255, 255, 255, 0) 100%) 1;
+     border-image: linear-gradient(to right, #FFF 0%, rgba(255, 255, 255, 0) 100%) 1;
   padding: 35px 0 35px 10px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -594,7 +600,8 @@ a {
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.8);
   background: #A44;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: transform 0.3s ease, border-color 0.3s ease;
   box-sizing: border-box;
 }
@@ -787,7 +794,8 @@ a {
 .precision_block .item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
 }
@@ -852,12 +860,14 @@ a {
 .footer .footer_inner {
   display: flex;
   align-items: end;
-  gap: 76px;
+  gap: 45px;
+  /* Reduced gap to give more room for text */
 }
 .footer .contacts-block .logo {
   width: 195px;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin-bottom: 30px;
 }
 .footer .contacts-block .items {
@@ -906,7 +916,8 @@ a {
 }
 .footer .footer-menu_block {
   display: flex;
-  gap: 91px;
+  gap: 50px;
+  /* Reduced gap between columns on desktop */
   align-items: start;
 }
 .footer .footer-menu_block .footer-menu .menu-title {
@@ -937,9 +948,38 @@ a {
   font-weight: 400;
   line-height: normal;
   transition: all 0.3s ease;
+  white-space: nowrap;
+  /* Prevents text wrapping for long menu items on desktop */
 }
 .footer .footer-menu_block .footer-menu .menu-list .menu-link:hover {
   opacity: 0.3;
+}
+.footer {
+  /* Professional mobile layout overrides to stack vertically below 990px */
+}
+@media screen and (max-width: 990px) {
+  .footer .footer_inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  .footer .footer-menu_block {
+    flex-direction: column;
+    gap: 35px;
+    width: 100%;
+  }
+  .footer .footer-menu {
+    width: 100%;
+  }
+  .footer .footer-menu .footer-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  .footer .footer-menu .menu-list .menu-link {
+    white-space: normal;
+    /* Let it wrap naturally on mobile screens */
+  }
 }
 
 .services-page .main {
@@ -1039,7 +1079,8 @@ a {
 }
 .services-page .service-about .video-block .player-btn img {
   display: block;
-  transform: translateX(3px); /* Optically center the triangle play icon */
+  transform: translateX(3px);
+  /* Optically center the triangle play icon */
 }
 .services-page .service-about .video-block .player-btn:hover {
   opacity: 0.8;
@@ -1077,6 +1118,8 @@ a {
   align-items: stretch;
 }
 .other-service .other-service_blocks .swiper-slide {
+  height: -webkit-fill-available;
+  height: -moz-available;
   height: stretch;
 }
 .other-service .item {
@@ -1108,7 +1151,8 @@ a {
 .other-service .item .img {
   width: 100%;
   height: 248px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: transform 0.3s ease;
 }
 .other-service .item .img-block {
@@ -1280,7 +1324,8 @@ body.modal-open {
 .modal-overlay .modal-content .custom-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 20px;
   display: block;
 }
@@ -1295,7 +1340,8 @@ body.modal-open {
 .modal-overlay .modal-content .video-wrapper video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
 }
 .modal-overlay .modal-content .video-wrapper {
@@ -1400,6 +1446,4 @@ body.modal-open {
   background: #F92010;
   border-color: #F92010;
   transform: rotate(90deg);
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

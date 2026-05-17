@@ -990,7 +990,8 @@ a {
     .footer_inner {
         display: flex;
         align-items: end;
-        gap: 76px;
+        gap: 45px;
+        /* Reduced gap to give more room for text */
     }
 
     .contacts-block {
@@ -1064,7 +1065,8 @@ a {
 
     .footer-menu_block {
         display: flex;
-        gap: 91px;
+        gap: 50px;
+        /* Reduced gap between columns on desktop */
         align-items: start;
 
         .footer-menu {
@@ -1098,11 +1100,43 @@ a {
                     font-weight: 400;
                     line-height: normal;
                     transition: all .3s ease;
+                    white-space: nowrap;
+                    /* Prevents text wrapping for long menu items on desktop */
 
                     &:hover {
                         opacity: 0.3;
                     }
                 }
+            }
+        }
+    }
+
+    /* Professional mobile layout overrides to stack vertically below 990px */
+    @media screen and (max-width: 990px) {
+        .footer_inner {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .footer-menu_block {
+            flex-direction: column;
+            gap: 35px;
+            width: 100%;
+        }
+
+        .footer-menu {
+            width: 100%;
+
+            .footer-nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 30px;
+            }
+
+            .menu-list .menu-link {
+                white-space: normal;
+                /* Let it wrap naturally on mobile screens */
             }
         }
     }
@@ -1228,7 +1262,8 @@ a {
 
                 img {
                     display: block;
-                    transform: translateX(3px); /* Optically center the triangle play icon */
+                    transform: translateX(3px);
+                    /* Optically center the triangle play icon */
                 }
 
                 &:hover {
