@@ -1216,15 +1216,20 @@ a {
 
             .player-btn {
                 cursor: pointer;
-                border-radius: 100px;
+                border-radius: 50%;
                 border: 1px solid #4D4D4D;
                 background: rgba(255, 255, 255, 0.80);
-                padding: 25px 25px 25px 30px;
+                width: 90px;
+                height: 90px;
                 display: flex;
-                flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 transition: all .3s ease;
+
+                img {
+                    display: block;
+                    transform: translateX(3px); /* Optically center the triangle play icon */
+                }
 
                 &:hover {
                     opacity: 0.8;
