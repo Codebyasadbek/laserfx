@@ -577,8 +577,6 @@ a {
   height: 515px;
   position: relative;
   margin-bottom: 156px;
-  overflow: hidden;
-  border-radius: 20px;
 }
 .services .services__right .img-block::after {
   content: "";
@@ -594,13 +592,16 @@ a {
   height: 100%;
   width: 100%;
   border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
   background: #A44;
   box-shadow: 21px -22px 4px -1px rgba(255, 255, 255, 0.2);
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  box-sizing: border-box;
 }
 .services .services__right .img-block:hover img {
   transform: scale(1.03);
+  border-color: #F92010;
 }
 .services .services__right .img-block .img-text {
   color: #FFF;
