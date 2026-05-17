@@ -600,7 +600,6 @@ a {
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.8);
   background: #A44;
-  box-shadow: 21px -22px 4px -1px rgba(255, 255, 255, 0.2);
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform 0.3s ease, border-color 0.3s ease;
