@@ -610,6 +610,9 @@ a {
   transform: scale(1.03);
   border-color: #F92010;
 }
+.services .services__right .img-block:hover::after {
+  transform: scale(1.03);
+}
 .services .services__right .img-block .img-text {
   color: #FFF;
   text-align: right;

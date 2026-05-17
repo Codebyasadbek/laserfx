@@ -695,6 +695,11 @@ a {
                 img {
                     transform: scale(1.03);
                     border-color: #F92010;
+
+                }
+
+                &::after {
+                    transform: scale(1.03);
                 }
             }
 
