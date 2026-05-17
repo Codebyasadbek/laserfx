@@ -75,7 +75,6 @@ a {
 }
 
 .main-btn {
-  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   padding: 20px;
@@ -118,7 +117,6 @@ a {
 
 .main {
   min-height: 750px;
-  height: -moz-fit-content;
   height: fit-content;
   position: relative;
   padding-top: 120px;
@@ -390,9 +388,7 @@ a {
 .marquee {
   margin-bottom: 58px;
   overflow: hidden;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   display: flex;
 }
 .marquee .marquee__track {
@@ -401,7 +397,6 @@ a {
   animation: marquee-scroll 50s linear infinite;
   white-space: nowrap;
   will-change: transform;
-  width: -moz-max-content;
   width: max-content;
 }
 .marquee .marquee__content {
@@ -528,8 +523,7 @@ a {
 }
 .services .services__lists .item {
   border-top: 1px solid;
-  -o-border-image: linear-gradient(to right, #FFF 0%, rgba(255, 255, 255, 0) 100%) 1;
-     border-image: linear-gradient(to right, #FFF 0%, rgba(255, 255, 255, 0) 100%) 1;
+  border-image: linear-gradient(to right, #FFF 0%, rgba(255, 255, 255, 0) 100%) 1;
   padding: 35px 0 35px 10px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -583,6 +577,8 @@ a {
   height: 515px;
   position: relative;
   margin-bottom: 156px;
+  overflow: hidden;
+  border-radius: 20px;
 }
 .services .services__right .img-block::after {
   content: "";
@@ -600,8 +596,11 @@ a {
   border-radius: 20px;
   background: #A44;
   box-shadow: 21px -22px 4px -1px rgba(255, 255, 255, 0.2);
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.services .services__right .img-block:hover img {
+  transform: scale(1.03);
 }
 .services .services__right .img-block .img-text {
   color: #FFF;
@@ -779,13 +778,21 @@ a {
   width: 100%;
   height: 165px;
   grid-column: span 3;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 .precision_block .item img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
+  transition: transform 0.3s ease;
+}
+.precision_block .item:hover {
+  border: 1px solid #F92010;
+}
+.precision_block .item:hover img {
+  transform: scale(1.05);
 }
 .precision_block .item:nth-child(1) {
   grid-column: span 5;
@@ -847,8 +854,7 @@ a {
 .footer .contacts-block .logo {
   width: 195px;
   height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   margin-bottom: 30px;
 }
 .footer .contacts-block .items {
@@ -1064,11 +1070,11 @@ a {
   align-items: stretch;
 }
 .other-service .other-service_blocks .swiper-slide {
-  height: -webkit-fill-available;
-  height: -moz-available;
   height: stretch;
 }
 .other-service .item {
+  display: block;
+  text-decoration: none;
   height: 100%;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.8);
@@ -1083,6 +1089,9 @@ a {
   border: 1px solid #F92010;
   background: #1E1A21;
 }
+.other-service .item:hover .img {
+  transform: scale(1.05);
+}
 .other-service .item:hover .btn {
   color: #F92010 !important;
 }
@@ -1092,9 +1101,12 @@ a {
 .other-service .item .img {
   width: 100%;
   height: 248px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 .other-service .item .img-block {
   position: relative;
+  overflow: hidden;
 }
 .other-service .item .img-block::after {
   content: "";
@@ -1211,4 +1223,6 @@ a {
   height: auto;
   position: relative;
   z-index: 2;
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */
