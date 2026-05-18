@@ -1604,7 +1604,7 @@ body.modal-open {
   transition: all 0.3s ease;
 }
 .oborudov-section .item .item_blocks .item_block {
-  display: block;
+  max-width: 310px;
   transition: all 0.3s ease;
 }
 .oborudov-section .item .item_blocks .item_block:hover .img {
