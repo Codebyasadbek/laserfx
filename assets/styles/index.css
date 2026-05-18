@@ -1579,6 +1579,7 @@ body.modal-open {
   gap: 20px;
 }
 .oborudov-section .item .item_blocks .img {
+  width: 310px;
   display: flex;
   height: 310px;
   padding: 46px 8.333px 47px 9.333px;
@@ -1603,6 +1604,7 @@ body.modal-open {
   transition: all 0.3s ease;
 }
 .oborudov-section .item .item_blocks .item_block {
+  display: block;
   transition: all 0.3s ease;
 }
 .oborudov-section .item .item_blocks .item_block:hover .img {

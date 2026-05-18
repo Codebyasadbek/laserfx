@@ -1836,6 +1836,7 @@ body.modal-open {
             gap: 20px;
 
             .img {
+                width: 310px;
                 display: flex;
                 height: 310px;
                 padding: 46px 8.333px 47px 9.333px;
@@ -1862,6 +1863,7 @@ body.modal-open {
             }
 
             .item_block {
+                display: block;
                 transition: all .3s ease;
 
                 &:hover {
