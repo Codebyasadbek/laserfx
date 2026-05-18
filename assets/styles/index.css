@@ -1697,4 +1697,70 @@ body.modal-open {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.dmx17 {
+  padding: 80px 0;
+  margin-bottom: 80px;
+  background: rgba(255, 255, 255, 0.05);
+}
+.dmx17 .service-page_section-title {
+  margin-bottom: 60px;
+}
+.dmx17 .dmx-table-container {
+  width: 100%;
+}
+.dmx17 .dmx-table-div {
+  display: grid;
+  grid-template-columns: 302px 302px 302px 302px;
+  row-gap: 0;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  width: 100%;
+  font-family: Inter, sans-serif;
+  text-align: left;
+}
+.dmx17 .dmx-table-div .dmx-header-cell {
+  color: #F92010;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: normal;
+  padding-bottom: 25px;
+}
+.dmx17 .dmx-table-div .dmx-header-cell.empty-cell {
+  padding-bottom: 0;
+}
+.dmx17 .dmx-table-div .dmx-cell {
+  border-bottom: 1px solid #FFF;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 15px;
+}
+.dmx17 .dmx-table-div .dmx-cell.channel-col {
+  font-weight: 400;
+}
+.dmx17 .dmx-table-div .dmx-cell.rowspan-cell {
+  grid-row: span 3;
+  align-self: stretch;
+  align-items: center;
+}
+.dmx17 .dmx-table-div .dmx-cell.empty-cell {
+  border-bottom: none;
+  padding: 0;
+}
+.dmx17 .dmx-table-div .dmx-cell.end-block {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.laserheadx-precision {
+  margin-bottom: 40px;
 }/*# sourceMappingURL=index.css.map */

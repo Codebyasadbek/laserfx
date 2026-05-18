@@ -1983,3 +1983,79 @@ body.modal-open {
         }
     }
 }
+
+
+.dmx17 {
+    padding: 80px 0;
+    margin-bottom: 80px;
+    background: rgba(255, 255, 255, 0.05);
+
+    .service-page_section-title {
+        margin-bottom: 60px;
+    }
+
+    .dmx-table-container {
+        width: 100%;
+    }
+
+    .dmx-table-div {
+        display: grid;
+        grid-template-columns: 302px 302px 302px 302px;
+        row-gap: 0;
+        column-gap: 30px;
+        width: 100%;
+        font-family: Inter, sans-serif;
+        text-align: left;
+
+        .dmx-header-cell {
+            color: #F92010;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: normal;
+            padding-bottom: 25px;
+
+            &.empty-cell {
+                padding-bottom: 0;
+            }
+        }
+
+        .dmx-cell {
+            border-bottom: 1px solid #FFF;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            color: #FFF;
+            font-family: Inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 15px;
+
+            &.channel-col {
+                font-weight: 400;
+            }
+
+            &.rowspan-cell {
+                grid-row: span 3;
+                align-self: stretch;
+                align-items: center;
+            }
+
+            &.empty-cell {
+                border-bottom: none; // hide line for empty cells to match mockup perfectly
+                padding: 0;
+            }
+
+            &.end-block {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+.laserheadx-precision {
+    margin-bottom: 40px;
+}
