@@ -1511,6 +1511,7 @@ body.modal-open {
   /* Perfectly sits below the fixed header */
   z-index: 1000;
   background: #1E1A21;
+  padding: 20px 0;
   margin-top: -20px;
   display: flex;
   flex-wrap: wrap;
