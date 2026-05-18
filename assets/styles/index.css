@@ -1507,7 +1507,7 @@ body.modal-open {
   top: 68px;
   /* Perfectly sits below the fixed header */
   z-index: 1000;
-  background: #1E1A21;
+  background: rgba(30, 26, 33, 0.8);
   padding: 12px 0;
   margin-top: -12px;
   margin-bottom: 50px;
