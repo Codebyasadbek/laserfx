@@ -77,6 +77,7 @@ a {
 }
 
 .main-btn {
+  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   padding: 20px;
@@ -119,6 +120,7 @@ a {
 
 .main {
   min-height: 750px;
+  height: -moz-fit-content;
   height: fit-content;
   position: relative;
   padding-top: 120px;
@@ -390,7 +392,9 @@ a {
 .marquee {
   margin-bottom: 58px;
   overflow: hidden;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   display: flex;
 }
 .marquee .marquee__track {
@@ -399,6 +403,7 @@ a {
   animation: marquee-scroll 50s linear infinite;
   white-space: nowrap;
   will-change: transform;
+  width: -moz-max-content;
   width: max-content;
 }
 .marquee .marquee__content {
@@ -525,7 +530,8 @@ a {
 }
 .services .services__lists .item {
   border-top: 1px solid;
-  border-image: linear-gradient(to right, #FFF 0%, rgba(255, 255, 255, 0) 100%) 1;
+  -o-border-image: linear-gradient(to right, #FFF 0%, rgba(255, 255, 255, 0) 100%) 1;
+     border-image: linear-gradient(to right, #FFF 0%, rgba(255, 255, 255, 0) 100%) 1;
   padding: 35px 0 35px 10px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -596,7 +602,8 @@ a {
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.8);
   background: #A44;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: transform 0.3s ease, border-color 0.3s ease;
   box-sizing: border-box;
 }
@@ -789,7 +796,8 @@ a {
 .precision_block .item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
 }
@@ -860,7 +868,8 @@ a {
 .footer .contacts-block .logo {
   width: 195px;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin-bottom: 30px;
 }
 .footer .contacts-block .items {
@@ -1111,6 +1120,8 @@ a {
   align-items: stretch;
 }
 .other-service .other-service_blocks .swiper-slide {
+  height: -webkit-fill-available;
+  height: -moz-available;
   height: stretch;
 }
 .other-service .item {
@@ -1142,7 +1153,8 @@ a {
 .other-service .item .img {
   width: 100%;
   height: 248px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: transform 0.3s ease;
 }
 .other-service .item .img-block {
@@ -1314,7 +1326,8 @@ body.modal-open {
 .modal-overlay .modal-content .custom-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 20px;
   display: block;
 }
@@ -1329,7 +1342,8 @@ body.modal-open {
 .modal-overlay .modal-content .video-wrapper video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
 }
 .modal-overlay .modal-content .video-wrapper {
@@ -1687,7 +1701,6 @@ body.modal-open {
 
 .dmx17 {
   padding: 80px 0;
-  margin-bottom: 80px;
   background: rgba(255, 255, 255, 0.05);
 }
 .dmx17 .service-page_section-title {
@@ -1700,17 +1713,19 @@ body.modal-open {
   display: grid;
   grid-template-columns: 302px 302px 302px 302px;
   row-gap: 0;
-  column-gap: 30px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
   width: 100%;
   font-family: Inter, sans-serif;
   text-align: left;
 }
 .dmx17 .dmx-table-div .dmx-header-cell {
   color: #F92010;
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
   line-height: normal;
-  padding-bottom: 25px;
+  padding-bottom: 30px;
 }
 .dmx17 .dmx-table-div .dmx-header-cell.empty-cell {
   padding-bottom: 0;
@@ -1747,7 +1762,6 @@ body.modal-open {
 }
 
 .laserheadx-precision {
-  margin-bottom: 40px;
-}
-
-/*# sourceMappingURL=index.css.map */
+  padding: 80px 0 40px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(30, 26, 33, 0) 40%, rgba(30, 26, 33, 0) 40%, rgba(255, 255, 255, 0.05) 100%);
+}/*# sourceMappingURL=index.css.map */

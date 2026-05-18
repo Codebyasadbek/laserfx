@@ -1987,7 +1987,6 @@ body.modal-open {
 
 .dmx17 {
     padding: 80px 0;
-    margin-bottom: 80px;
     background: rgba(255, 255, 255, 0.05);
 
     .service-page_section-title {
@@ -2009,10 +2008,11 @@ body.modal-open {
 
         .dmx-header-cell {
             color: #F92010;
-            font-size: 24px;
-            font-weight: 600;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 700;
             line-height: normal;
-            padding-bottom: 25px;
+            padding-bottom: 30px;
 
             &.empty-cell {
                 padding-bottom: 0;
@@ -2057,5 +2057,6 @@ body.modal-open {
 }
 
 .laserheadx-precision {
-    margin-bottom: 40px;
+    padding: 80px 0 40px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(30, 26, 33, 0) 40%, rgba(30, 26, 33, 0) 40%, rgba(255, 255, 255, 0.05) 100%);
 }
