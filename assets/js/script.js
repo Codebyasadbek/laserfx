@@ -94,16 +94,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const imageModalContent = imageModal.querySelector('.modal-content');
         const imageModalImg = imageModal.querySelector('.custom-image');
         const imageModalClose = imageModal.querySelector('.modal-close');
-        
-        const precisionItems = document.querySelectorAll('.precision_block .item');
-        precisionItems.forEach((item) => {
+
+        const modalTriggers = document.querySelectorAll('.precision_block .item, .product-section .images-block .img');
+        modalTriggers.forEach((item) => {
             item.addEventListener('click', () => {
                 const img = item.querySelector('img');
                 if (!img) return;
-                
+
                 const imgSrc = img.getAttribute('src');
                 imageModalImg.setAttribute('src', imgSrc);
-                
+
                 document.body.classList.add('modal-open');
                 imageModal.classList.add('active');
                 setTimeout(() => {
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 10);
             });
         });
-        
+
         const closeImageModal = () => {
             imageModal.classList.remove('active');
             imageModalContent.classList.remove('active');
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 imageModalImg.setAttribute('src', '');
             }, 400);
         };
-        
+
         imageModalClose.addEventListener('click', closeImageModal);
         imageModal.addEventListener('click', (e) => {
             if (e.target === imageModal) closeImageModal();
@@ -130,20 +130,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Custom Video Player Modal
     const videoModal = document.getElementById('video-modal');
     const videoBlock = document.querySelector('.video-block');
-    
+
     if (videoModal && videoBlock) {
         const videoModalContent = videoModal.querySelector('.modal-content');
         const videoModalClose = videoModal.querySelector('.modal-close');
         const modalIframe = document.getElementById('modal-iframe');
         const modalVideoContainer = document.getElementById('modal-video-container');
         const modalVideo = document.getElementById('modal-video');
-        
+
         const playPauseBtn = videoModal.querySelector('.play-pause-btn');
         const playIcon = playPauseBtn.querySelector('.play-icon');
         const pauseIcon = playPauseBtn.querySelector('.pause-icon');
         const progressBarContainer = videoModal.querySelector('.progress-bar-container');
         const progressBarFill = videoModal.querySelector('.progress-bar-fill');
-        
+
         // Embed parser function to convert standard links to iframe embed links
         const getEmbedUrl = (url) => {
             if (url.includes('rutube.ru/video/')) {
@@ -164,10 +164,10 @@ document.addEventListener('DOMContentLoaded', () => {
         videoBlock.addEventListener('click', () => {
             const rawSrc = videoBlock.getAttribute('data-video-src') || 'https://assets.mixkit.co/videos/preview/mixkit-laser-projection-on-a-dark-stage-41586-large.mp4';
             const embedSrc = getEmbedUrl(rawSrc);
-            
+
             // Check if it's an iframe-based video (YouTube/Rutube) or a direct video file (MP4)
             const isIFrameVideo = embedSrc.includes('rutube.ru') || embedSrc.includes('youtube.com') || embedSrc.includes('youtu.be');
-            
+
             if (isIFrameVideo) {
                 modalVideoContainer.style.display = 'none';
                 modalIframe.style.display = 'block';
@@ -178,23 +178,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalVideoContainer.style.display = 'block';
                 modalVideo.setAttribute('src', embedSrc);
             }
-            
+
             document.body.classList.add('modal-open');
             videoModal.classList.add('active');
             setTimeout(() => {
                 videoModalContent.classList.add('active');
             }, 10);
         });
-        
+
         const closeVideoModal = () => {
             videoModal.classList.remove('active');
             videoModalContent.classList.remove('active');
             document.body.classList.remove('modal-open');
-            
+
             setTimeout(() => {
                 modalIframe.setAttribute('src', '');
                 modalIframe.style.display = 'none';
-                
+
                 modalVideo.pause();
                 modalVideo.setAttribute('src', '');
                 modalVideoContainer.style.display = 'none';
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 progressBarFill.style.width = '0%';
             }, 400);
         };
-        
+
         videoModalClose.addEventListener('click', closeVideoModal);
         videoModal.addEventListener('click', (e) => {
             if (e.target === videoModal) closeVideoModal();
@@ -224,16 +224,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 pauseIcon.classList.add('hidden');
             }
         };
-        
+
         playPauseBtn.addEventListener('click', togglePlay);
         modalVideo.addEventListener('click', togglePlay);
-        
+
         // Custom Time/Progress Update
         modalVideo.addEventListener('timeupdate', () => {
             const percent = (modalVideo.currentTime / modalVideo.duration) * 100;
             progressBarFill.style.width = `${percent}%`;
         });
-        
+
         // Click to Seek function
         progressBarContainer.addEventListener('click', (e) => {
             const rect = progressBarContainer.getBoundingClientRect();

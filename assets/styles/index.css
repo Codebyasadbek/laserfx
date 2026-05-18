@@ -7,6 +7,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   background: #1E1A21;
+  overflow: unset !important;
 }
 
 .wrapper {
@@ -1501,6 +1502,9 @@ body.modal-open {
 .other-page .hero-section .section-description {
   margin-bottom: 0;
 }
+.other-page .laserheadx2 {
+  margin-bottom: 40px;
+}
 
 .oborudov-section .section-categories {
   position: sticky;
@@ -1619,4 +1623,32 @@ body.modal-open {
 }
 .oborudov-section .end-block .section-description {
   margin-bottom: 0;
+}
+
+.product-section .images-block {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.product-section .images-block .img {
+  display: flex;
+  width: 420px;
+  height: 350px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: #4D4D4D;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.product-section .images-block .img img {
+  transition: all 0.3s ease;
+}
+.product-section .images-block .img:hover {
+  border: 1px solid #F92010;
+}
+.product-section .images-block .img:hover img {
+  transform: scale(1.05);
 }/*# sourceMappingURL=index.css.map */

@@ -8,6 +8,7 @@
 body {
     font-family: "Montserrat", sans-serif;
     background: #1E1A21;
+    overflow: unset !important;
 }
 
 .wrapper {
@@ -1743,6 +1744,10 @@ body.modal-open {
             margin-bottom: 0;
         }
     }
+
+    .laserheadx2 {
+        margin-bottom: 40px;
+    }
 }
 
 
@@ -1885,6 +1890,42 @@ body.modal-open {
 
         .section-description {
             margin-bottom: 0;
+        }
+    }
+}
+
+
+
+.product-section {
+    .images-block {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        .img {
+            display: flex;
+            width: 420px;
+            height: 350px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.80);
+            background: #4D4D4D;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all .3s ease;
+
+            img {
+                transition: all .3s ease;
+            }
+
+            &:hover {
+                border: 1px solid #F92010;
+
+                img {
+                    transform: scale(1.05);
+                }
+            }
         }
     }
 }
