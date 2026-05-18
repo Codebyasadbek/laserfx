@@ -243,4 +243,65 @@ document.addEventListener('DOMContentLoaded', () => {
             modalVideo.currentTime = newTime;
         });
     }
+
+    // 3. ScrollSpy & Smooth Scroll navigation for Oborudov (Equipment) page
+    const navLinks = document.querySelectorAll('.section-categories .btn');
+    const sections = document.querySelectorAll('.oborudov-section .item, .oborudov-section .end-block');
+
+    if (navLinks.length > 0 && sections.length > 0) {
+        // Auto smooth-scroll when categories button is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const targetId = link.getAttribute('href');
+                if (targetId && targetId.startsWith('#')) {
+                    e.preventDefault();
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        const headerOffset = 150; // Offset for header + sticky categories heights
+                        const elementPosition = targetSection.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+
+                        // Set clicked as active immediately
+                        navLinks.forEach(el => el.classList.remove('active'));
+                        link.classList.add('active');
+                    }
+                }
+            });
+        });
+
+        // IntersectionObserver for extremely performant scroll-tracking (ScrollSpy)
+        const spyOptions = {
+            root: null,
+            rootMargin: '-160px 0px -40% 0px', // triggers when section enters top-center part of screen
+            threshold: 0
+        };
+
+        const spyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    if (!id) return;
+
+                    navLinks.forEach(link => {
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        }, spyOptions);
+
+        sections.forEach(sec => {
+            if (sec.getAttribute('id')) {
+                spyObserver.observe(sec);
+            }
+        });
+    }
 });

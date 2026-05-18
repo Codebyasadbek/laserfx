@@ -1446,4 +1446,173 @@ body.modal-open {
   background: #F92010;
   border-color: #F92010;
   transform: rotate(90deg);
+}
+
+.other-page {
+  overflow: visible !important;
+  /* Allows position: sticky; to function perfectly on child elements */
+}
+.other-page .main {
+  padding-top: 90px;
+  margin-bottom: 0;
+  min-height: auto;
+  height: auto;
+}
+.other-page .main::after {
+  display: none;
+}
+.other-page .breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+.other-page .breadcrumb .item {
+  color: #FFF;
+  leading-trim: both;
+  text-edge: cap;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+.other-page .breadcrumb .item:hover {
+  opacity: 0.8;
+}
+.other-page .breadcrumb .item.now {
+  opacity: 0.8;
+}
+.other-page .breadcrumb .line {
+  opacity: 0.5;
+  background: #FFF;
+  width: 30px;
+  height: 0.5px;
+}
+.other-page .hero-section_inner {
+  display: block;
+}
+.other-page .hero-section {
+  margin-bottom: 60px;
+}
+.other-page .hero-section .main-title {
+  margin-bottom: 25px;
+}
+.other-page .hero-section .section-description {
+  margin-bottom: 0;
+}
+
+.oborudov-section .section-categories {
+  position: sticky;
+  top: 68px;
+  /* Perfectly sits below the fixed header */
+  z-index: 1000;
+  background: #1E1A21;
+  margin-top: -20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 80px;
+}
+.oborudov-section .section-categories .btn {
+  display: flex;
+  padding: 20px 25px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  border: 1px solid #FFF;
+  background: #2A262D;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px;
+  transition: all 0.3s ease;
+}
+.oborudov-section .section-categories .btn:first-child {
+  margin-left: 78.5px;
+}
+.oborudov-section .section-categories .btn:hover {
+  opacity: 0.5;
+}
+.oborudov-section .section-categories .btn.active {
+  border-color: #F92010;
+  color: #F92010;
+  opacity: 1;
+}
+.oborudov-section .item {
+  position: relative;
+  padding-bottom: 40px;
+  margin-bottom: 60px;
+}
+.oborudov-section .item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.oborudov-section .item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 1px;
+  background: #FFF;
+  opacity: 0.5;
+}
+.oborudov-section .item .service-page_section-title {
+  margin-bottom: 40px;
+}
+.oborudov-section .item .section-description {
+  margin-bottom: 60px;
+}
+.oborudov-section .item .item_blocks {
+  display: flex;
+  gap: 20px;
+}
+.oborudov-section .item .item_blocks .img {
+  display: flex;
+  height: 310px;
+  padding: 46px 8.333px 47px 9.333px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 20px;
+  border: 1px solid #FFF;
+  background: #4D4D4D;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.oborudov-section .item .item_blocks .block_description {
+  color: #FFF;
+  text-align: center;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transition: all 0.3s ease;
+}
+.oborudov-section .item .item_blocks .item_block {
+  transition: all 0.3s ease;
+}
+.oborudov-section .item .item_blocks .item_block:hover .img {
+  border: 1px solid #F92010;
+}
+.oborudov-section .item .item_blocks .item_block:hover .block_description {
+  color: #F92010;
+}
+.oborudov-section .end-block {
+  margin-top: 80px;
+  padding-bottom: 100px;
+}
+.oborudov-section .end-block .section-description {
+  margin-bottom: 0;
 }/*# sourceMappingURL=index.css.map */
