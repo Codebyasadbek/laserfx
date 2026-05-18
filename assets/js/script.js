@@ -95,13 +95,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const imageModalImg = imageModal.querySelector('.custom-image');
         const imageModalClose = imageModal.querySelector('.modal-close');
 
-        const modalTriggers = document.querySelectorAll('.precision_block .item, .product-section .images-block .img');
+        const modalTriggers = document.querySelectorAll('.precision_block .item, .product-section .images-block .img, .brand-item.zoom-trigger');
         modalTriggers.forEach((item) => {
             item.addEventListener('click', () => {
                 const img = item.querySelector('img');
                 if (!img) return;
 
-                const imgSrc = img.getAttribute('src');
+                const imgSrc = img.getAttribute('data-zoom-src') || img.getAttribute('src');
                 imageModalImg.setAttribute('src', imgSrc);
 
                 document.body.classList.add('modal-open');
