@@ -11,7 +11,8 @@ body {
 }
 
 .wrapper {
-    overflow: hidden;
+    overflow-x: clip;
+    overflow-y: visible;
 }
 
 ul,
@@ -1680,9 +1681,6 @@ body.modal-open {
 
 
 .other-page {
-    overflow: visible !important;
-    /* Allows position: sticky; to function perfectly on child elements */
-
     .main {
         padding-top: 90px;
         margin-bottom: 0;
@@ -1755,42 +1753,47 @@ body.modal-open {
         /* Perfectly sits below the fixed header */
         z-index: 1000;
         background: #1E1A21;
-        padding: 20px 0;
-        margin-top: -20px;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 25px;
-        margin-bottom: 80px;
+        padding: 12px 0;
+        margin-top: -12px;
+        margin-bottom: 50px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        .categories-inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+        }
 
         .btn {
             display: flex;
-            padding: 20px 25px;
+            padding: 10px 20px;
             justify-content: center;
             align-items: center;
-            gap: 10px;
-            border-radius: 20px;
-            border: 1px solid #FFF;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
             background: #2A262D;
             color: #FFF;
-            font-family: Inter;
-            font-size: 25px;
+            font-family: Inter, sans-serif;
+            font-size: 15px;
             font-style: normal;
-            font-weight: 300;
-            line-height: 30px;
+            font-weight: 400;
+            line-height: normal;
             transition: all .3s ease;
 
             &:first-child {
-                margin-left: 78.5px;
+                margin-left: 0;
             }
 
             &:hover {
-                opacity: 0.5;
+                border-color: #FFF;
+                opacity: 0.8;
             }
 
             &.active {
                 border-color: #F92010;
                 color: #F92010;
+                background: rgba(249, 32, 16, 0.05);
                 opacity: 1;
             }
         }

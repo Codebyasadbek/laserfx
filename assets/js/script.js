@@ -249,6 +249,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.oborudov-section .item, .oborudov-section .end-block');
 
     if (navLinks.length > 0 && sections.length > 0) {
+        let isScrollingFromClick = false;
+
         // Auto smooth-scroll when categories button is clicked
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
@@ -257,9 +259,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     e.preventDefault();
                     const targetSection = document.querySelector(targetId);
                     if (targetSection) {
-                        const headerOffset = 150; // Offset for header + sticky categories heights
+                        const headerOffset = 160; // Offset for header + sticky categories heights
                         const elementPosition = targetSection.getBoundingClientRect().top;
                         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        isScrollingFromClick = true;
 
                         window.scrollTo({
                             top: offsetPosition,
@@ -269,39 +273,55 @@ document.addEventListener('DOMContentLoaded', () => {
                         // Set clicked as active immediately
                         navLinks.forEach(el => el.classList.remove('active'));
                         link.classList.add('active');
+
+                        setTimeout(() => {
+                            isScrollingFromClick = false;
+                        }, 800);
                     }
                 }
             });
         });
 
-        // IntersectionObserver for extremely performant scroll-tracking (ScrollSpy)
-        const spyOptions = {
-            root: null,
-            rootMargin: '-160px 0px -40% 0px', // triggers when section enters top-center part of screen
-            threshold: 0
-        };
+        // Bulletproof scroll spy calculations
+        const handleScrollSpy = () => {
+            if (isScrollingFromClick) return;
 
-        const spyObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.getAttribute('id');
-                    if (!id) return;
+            const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+            const offset = 180; // trigger offset for precision
 
-                    navLinks.forEach(link => {
-                        if (link.getAttribute('href') === `#${id}`) {
-                            link.classList.add('active');
-                        } else {
-                            link.classList.remove('active');
-                        }
-                    });
+            let activeSectionId = null;
+
+            sections.forEach(sec => {
+                const id = sec.getAttribute('id');
+                if (!id) return;
+
+                const rect = sec.getBoundingClientRect();
+                const secTop = rect.top + window.pageYOffset - offset;
+
+                if (scrollPosition >= secTop) {
+                    activeSectionId = id;
                 }
             });
-        }, spyOptions);
 
-        sections.forEach(sec => {
-            if (sec.getAttribute('id')) {
-                spyObserver.observe(sec);
+            // Force last item active if scrolled to the very bottom
+            if ((window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 60)) {
+                const lastSec = sections[sections.length - 1];
+                if (lastSec) activeSectionId = lastSec.getAttribute('id');
             }
-        });
+
+            if (activeSectionId) {
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === `#${activeSectionId}`) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+        };
+
+        window.addEventListener('scroll', handleScrollSpy);
+        window.addEventListener('load', handleScrollSpy);
+        handleScrollSpy();
     }
 });
