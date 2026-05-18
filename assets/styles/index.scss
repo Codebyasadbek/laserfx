@@ -1752,6 +1752,8 @@ body.modal-open {
 
 
 .oborudov-section {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(30, 26, 33, 0) 40%, rgba(30, 26, 33, 0) 40%, rgba(255, 255, 255, 0.05) 100%);
+
     .section-categories {
         position: sticky;
         top: 68px;
@@ -1901,6 +1903,7 @@ body.modal-open {
         display: flex;
         gap: 20px;
         align-items: center;
+        margin-bottom: 80px;
 
         .img {
             display: flex;
@@ -1925,6 +1928,57 @@ body.modal-open {
                 img {
                     transform: scale(1.05);
                 }
+            }
+        }
+    }
+
+    .specifications {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        margin-bottom: 40px;
+
+        .contents {
+            .service-page_section-title {
+                margin-bottom: 40px;
+            }
+        }
+
+        .about-block {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            align-self: stretch;
+            margin-bottom: 10px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            .text {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: #FFF;
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+
+                img {
+                    width: 25px;
+                    height: 25px;
+                    aspect-ratio: 1/1;
+                }
+            }
+
+            .text2 {
+                color: #FFF;
+                font-family: Inter;
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
             }
         }
     }
