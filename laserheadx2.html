@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>laserfx - Оборудование</title>
+    <!-- 1. Preconnect to font domains early -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <!-- 2. Load Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+
+    <!-- 3. Preload critical above-the-fold image -->
+    <link as="image" href="assets/images/main-page_main-bg.png" rel="preload" fetchpriority="high" />
+
+    <!-- 4. Load main CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="assets/styles/index.css" rel="stylesheet" />
+
+    <!-- 5. Initial background style to prevent white flash -->
+    <style>
+        body {
+            background-color: #1E1A21;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper other-page">
+        <div class="main">
+            <header class="header">
+                <div class="header_bg">
+                    <div class="container">
+                        <div class="header_inner">
+                            <a class="logo" href="/">
+                                <img alt="logo.png" fetchpriority="high" loading="eager" src="assets/images/logo.png"
+                                    width="140" height="40" />
+                            </a>
+                            <nav>
+                                <ul class="menu-items">
+                                    <li>
+                                        <a class="menu-list" href="#">О НАС</a>
+                                    </li>
+                                    <li>
+                                        <div class="menu-list open-dropdownBtn">УСЛУГИ <img alt="dropdown-iconsvg"
+                                                fetchpriority="high" height="18" loading="eager"
+                                                src="assets/images/dropdown-icon.svg" width="18" /></div>
+                                    </li>
+                                    <li>
+                                        <a class="menu-list" href="oborudov.html">ОБОРУДОВАНИЕ</a>
+                                    </li>
+                                    <li>
+                                        <a class="menu-list" href="#">НАШИ РАБОТЫ</a>
+                                    </li>
+                                    <li>
+                                        <a class="menu-list" href="#">ВАКАНСИИ</a>
+                                    </li>
+                                    <li>
+                                        <a class="menu-list" href="#">КОНТАКТЫ</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="burger-menu_btn">
+                                <img src="assets/images/burger-menu_btn.svg" alt="burger-menu_btn.svg"
+                                    class="btn active" decoding="async">
+                                <img src="assets/images/close-btn.svg" alt="close-btn.svg" class="btn" decoding="async">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-dropdown">
+                    <div class="container">
+                        <div class="menu-dropdown_inner">
+                            <div class="menu-dropdown_leftside">
+                                <div class="items">
+                                    <li>
+                                        <a href="#">Лазерная проекция</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Laser Bar</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Led Трубки</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Архитектурное освещение</a>
+                                    </li>
+                                </div>
+                                <div class="items">
+                                    <li>
+                                        <a href="#">Led Браслеты</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Танцующие фонтаны</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Лазерное шоу</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Голография на воде</a>
+                                    </li>
+                                </div>
+                                <div class="items">
+                                    <li>
+                                        <a href="#">Производсвто лазерной графики</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Аренда лазеров</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div class="menu-dropdown_rightside">
+                                <div class="contacts">
+                                    <a class="tel" href="tel:+7 (926) 186-70-57">+7 (926) 186-70-57</a>
+                                    <a class="email" href="mailto:makarov@lazerfx.ru">makarov@lazerfx.ru</a>
+                                </div>
+                                <div class="social-icons">
+                                    <a class="icon" href="https://vk.com/laserfxru" style="width: 35px; height: 35px;">
+                                        <img alt="vk-icon.svg" fetchpriority="low" height="128" loading="lazy"
+                                            src="assets/images/vk-icon.png" width="128" decoding="async" />
+                                    </a>
+                                    <a class="icon" href="https://rutube.ru/channel/2838254/">
+                                        <img alt="tg-icon.svg" fetchpriority="low" height="128" loading="lazy"
+                                            src="assets/images/rutube.png" width="128" decoding="async" />
+                                    </a>
+                                    <a class="icon" href="https://max.ru/id502716780704_biz ">
+                                        <img alt="youtube-icon.svg" fetchpriority="low" height="128" loading="lazy"
+                                            src="assets/images/max.png" width="128" decoding="async" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="hero-section">
+                <div class="container">
+                    <div class="hero-section_inner">
+                        <div class="contents">
+                            <div class="breadcrumb">
+                                <a href="/" class="item">Главная</a>
+                                <div class="line"></div>
+                                <a href="/" class="item">Оборудование</a>
+                                <div class="line"></div>
+                                <div class="item now">LaserHead X2 </div>
+                            </div>
+                            <h1 class="main-title">LaserHead X2 - лазерная бошка + вош</h1>
+                            <p class="section-description">
+                                Выбор профессионалов, которые ценят универсальность, мощность и надёжность. Объедините
+                                заливающий свет и лазерные эффекты в одном приборе и создайте шоу, которое запомнится
+                                зрителям надолго!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-section">
+                <div class="container">
+                    <div class="images-block">
+                        <div class="img">
+                            <img src="assets/images/product-section_img.png" alt="product-section_img.png" class="img">
+                        </div>
+                        <img src="assets/images/product-section_img.png" alt="product-section_img.png" class="img">
+                        <img src="assets/images/product-section_img.png" alt="product-section_img.png" class="img">
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="container" style="position: relative;">
+            <div class="back-icon">
+                <img alt="back-icon.svg" decoding="async" height="20" loading="lazy" src="assets/images/back-icon.svg"
+                    width="36" />
+            </div>
+        </div>
+
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer_inner">
+                    <div class="contacts-block">
+                        <a href="/">
+                            <img alt="logo.png" class="logo" decoding="async" loading="lazy"
+                                src="assets/images/logo.png" width="140" height="40" />
+                        </a>
+                        <div class="items">
+                            <a class="tel" href="tel:+79261867057">+7 (926) 186-70-57</a>
+                            <a class="email" href="mailto:makarov@lazerfx.ru">makarov@lazerfx.ru</a>
+                        </div>
+                        <div class="social-icons">
+                            <a href="https://vk.com/laserfxru"><img alt="vk-icon.png" class="icon" decoding="async"
+                                    height="128" loading="lazy" src="assets/images/vk-icon.png" width="128" /></a>
+                            <a href="https://rutube.ru/channel/2838254/"><img alt="rutube.png" class="icon"
+                                    decoding="async" height="128" loading="lazy" src="assets/images/rutube.png"
+                                    width="128" /></a>
+                            <a href="https://max.ru/id502716780704_biz "><img alt="max.png" class="icon"
+                                    decoding="async" height="128" loading="lazy" src="assets/images/max.png"
+                                    width="128" /></a>
+                        </div>
+                        <div class="contents">
+                            <p>Премиальные лазерные шоу и световые инсталяции. Искусство, вдохновленное светом.</p>
+                            <p>2001-2022 © LaserFX</p>
+                        </div>
+                    </div>
+                    <div class="footer-menu_block">
+                        <div class="footer-menu">
+                            <div class="menu-title">Услуги</div>
+                            <div class="footer-nav">
+                                <ul class="menu-list">
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#">Лазерная проекция</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#">Laser Bar</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#">Led Трубки</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#">Архитектурное освещение</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#">Led Браслеты</a>
+                                    </li>
+                                </ul>
+                                <ul class="menu-list">
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#">Танцующие фонтаны</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#">Лазерное шоу</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#">Голография на воде</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#">Производсвто лазерной графики</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#">Аренда лазеров</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-menu">
+                            <div class="menu-title">Компания</div>
+                            <div class="footer-nav">
+                                <ul class="menu-list">
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#">О нас</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#">Наши работы</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#">Оборудование</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#">Вакансии</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#">Контакты</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Backend-Friendly Image Modal -->
+    <div id="image-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-close">
+                <img src="assets/images/x.svg" alt="close">
+            </div>
+            <img src="" class="custom-image" alt="enlarged-project">
+        </div>
+    </div>
+
+    <!-- Backend-Friendly Video Modal -->
+    <div id="video-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-close">
+                <img src="assets/images/x.svg" alt="close">
+            </div>
+            <div class="video-wrapper">
+                <!-- If iframe-based (YouTube/Rutube), this iframe will be active -->
+                <iframe id="modal-iframe" src="" width="100%" height="100%" allow="clipboard-write; autoplay"
+                    webkitallowfullscreen mozallowfullscreen allowfullscreen
+                    style="border: none; display: none; border-radius: 20px;"></iframe>
+
+                <!-- If HTML5 video file based, this video player will be active -->
+                <div id="modal-video-container" class="video-wrapper paused"
+                    style="display: none; width: 100%; height: 100%;">
+                    <video id="modal-video" src="" loop playsinline></video>
+                    <div class="custom-controls">
+                        <div class="control-bottom-row">
+                            <button class="play-pause-btn" title="Play">
+                                <svg class="play-icon" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                <svg class="pause-icon hidden" viewBox="0 0 24 24">
+                                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                                </svg>
+                            </button>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer="" src="assets/js/script.js"></script>
+</body>
+
+</html>
